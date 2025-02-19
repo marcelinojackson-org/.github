@@ -10,6 +10,7 @@ Current highlights:
 - **AIML RAG Ops Lab** – a local LangGraph + Ollama + Chroma RAG lab with ingest, inspect, and chat workflows, CSV/JSON ingestion, source inventory reports, evals, and updated architecture diagrams.
 - **Snowflake GitHub Actions** – a family of GitHub Actions, helper libraries, and testing harnesses that showcase Cortex AI integrations plus day‑to‑day operational tooling.
 - **Snowflake labs and tooling** – Snowpark Container Services demos ([`Snowflake.SPCS.Lab`](https://github.com/marcelinojackson-org/Snowflake.SPCS.Lab)), the [`snow9s`](https://github.com/marcelinojackson-org/snow9s) TUI, and a reserved IaC track ([`Snowflake.IAC`](https://github.com/marcelinojackson-org/Snowflake.IAC)) ready to house future assets.
+- **DataOps dbt medallion demo** – a minimal dbt Core medallion sample (bronze/silver/gold) on messy HR data in Postgres + Docker.
 
 This README is the top-level atlas. Each repository underneath ships with its own README for installation or usage details.
 
@@ -23,6 +24,7 @@ This README is the top-level atlas. Each repository underneath ships with its ow
 
 | Path | Focus | Highlights / Notes |
 | --- | --- | --- |
+| [`DataOps.dbtMedallionDemo`](https://github.com/marcelinojackson-org/DataOps.dbtMedallionDemo) | dbt medallion demo | Messy HR data, Postgres + Docker, bronze/silver/gold layers. |
 | [`Azure.AKS.GitOps.Lab`](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab) | Azure Kubernetes Service GitOps lab | Terraform-based cluster bring-up, Helm workloads, Argo CD continuous sync, Ansible automation, observability stack, CLI playbooks, teardown tooling. |
 
 ### AIML / RAG
@@ -148,6 +150,13 @@ Start with the repo `README.md` for setup, configuration, and CLI command usage.
 - **Focus areas** – Surfaces services, compute pools, status, and resource age with contextual headers and a debug pane that shows executed Snowflake queries.
 - **Build/test** – `make build` (drops `./bin/snow9s`) and `make test` (`go test ./...`) cover local validation; Go 1.22+ required.
 
+## DataOps
+
+| Path | Focus | Highlights / Notes |
+| --- | --- | --- |
+| [`DataOps.dbtMedallionDemo`](https://github.com/marcelinojackson-org/DataOps.dbtMedallionDemo) | dbt medallion demo | Messy HR data, Postgres + Docker, bronze/silver/gold layers. |
+
 ## Welcome
 
 Feel free to browse, explore, download, or comment. Feedback is always welcome.
+
