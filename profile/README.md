@@ -1,5 +1,8 @@
 # Marcelino’s OSS Public Portfolio
 
+**[Resume](https://marcelinojackson-org.github.io/info/resume)**
+
+
 This workspace curates my published OSS projects across Azure infrastructure, DevSecOps pipelines, Snowflake GitHub Actions, and Snowflake labs/tools—with room for additional stacks as they go public.
 
 Current highlights:
