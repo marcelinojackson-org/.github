@@ -6,10 +6,10 @@
 
 | Pillar | Highlights |
 | --- | --- |
-| **Reusable Actions** | `Snowflake.CortexAI.AgentAction`, `Snowflake.CortexAI.AnalystAction`, `Snowflake.CortexAI.SearchAction`, `Snowflake.RunSQLAction`, `Snowflake.AISQLAction` – all publish-ready with local harnesses and Marketplace releases. |
+| **Reusable Actions** | `Snowflake.CortexAI.AgentAction`, `Snowflake.CortexAI.AnalystAction`, `Snowflake.CortexAI.SearchAction`, `Snowflake.RunSQLAction`, `Snowflake.AISQLAction` *(WIP)* – publish-ready harnesses + Marketplace releases. |
 | **Shared Libraries** | `@marcelinojackson-org/snowflake-common` wraps Snowflake SDK + Cortex REST APIs (connection health, runSql, Analyst, Search, Agent helpers). |
 | **Testing & CI** | `Snowflake.Testing` repo orchestrates local scripts + GitHub workflows, validating both source actions and published Marketplace tags for every change. |
-| **Observability** | `Snowflake.FrostCTL` (Go + Bubble Tea) delivers a k9s-style TUI for warehouses, queries, tasks, and AI runs. |
+| **Observability** | `Snowflake.FrostCTL` *(WIP, Go + Bubble Tea)* delivers a k9s-style TUI for warehouses, queries, tasks, and AI runs. |
 
 ## 🛠️ GitHub Action Catalog
 
@@ -56,6 +56,12 @@
 3. Run `Snowflake.Testing` CI (local + published).  
 4. Tag (`vX.Y.Z`), craft release notes, publish to Marketplace.  
 5. Reference the new tag in testing workflows.
+
+## 📅 Roadmap / WIP
+
+- `Snowflake.AISQLAction`: action scaffolding done; marketplace release scheduled after advanced prompt coverage.
+- `Snowflake.FrostCTL`: warehouse/query panes live; adding AI + DevOps panels before GA.
+- `Snowflake.Terraform` & `Snowflake.Ansible`: infrastructure-as-code modules planned (design stage).
 
 ---
 
