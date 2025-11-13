@@ -15,26 +15,26 @@ This README is the top-level atlas. Each repository underneath ships with its ow
 
 | Path | Focus | Highlights / Notes |
 | --- | --- | --- |
-| [Azure.AKS.Gitops.Lab](../Azure/Azure.AKS.Gitops.Lab/README.md) | Azure Kubernetes Service GitOps lab | Terraform-based cluster bring-up, Helm workloads, Argo CD continuous sync, Ansible automation, observability stack, CLI playbooks, teardown tooling. |
+| Azure.AKS.Gitops.Lab | Azure Kubernetes Service GitOps lab | Terraform-based cluster bring-up, Helm workloads, Argo CD continuous sync, Ansible automation, observability stack, CLI playbooks, teardown tooling. |
 
 ### Snowflake
 
 | Path | Focus | Highlights / Notes |
 | --- | --- | --- |
-| [Snowflake.FrostyStatus](Snowflake.FrostyStatus/README.md) | Streamlit dashboard | Snowsight-inspired status board for warehouses, tasks, and jobs with keyboard-friendly exploration. |
-| [Snowflake.IAC](Snowflake.IAC/README.md) | Future infrastructure | Empty placeholder for eventual Snowflake IaC assets. |
+| Snowflake.FrostyStatus | Streamlit dashboard | Snowsight-inspired status board for warehouses, tasks, and jobs with keyboard-friendly exploration. |
+| Snowflake.IAC | Future infrastructure | Empty placeholder for eventual Snowflake IaC assets. |
 
 #### Snowflake GitHub Actions
 
 | Path | Focus | Highlights / Notes |
 | --- | --- | --- |
-| [Snowflake.Common](Snowflake.Common/README.md) | Shared TypeScript library | Centralizes `SNOWFLAKE_*` validation, logging controls, and helper APIs (`getSnowflakeConnection`, `runSql`) consumed by every action. |
-| [Snowflake.Testing](Snowflake.Testing/README.md) | Validation scripts | Cross-repo build/test harnesses that rebuild shared libraries, package actions, and run local Cortex smoke tests. |
-| [Snowflake.RunSQLAction](Snowflake.RunSQLAction/README.md) | GitHub Action | Executes SQL end-to-end, applies safe limits, emits CSV/metadata artifacts for large result sets, and leans on the shared library for connectivity. |
-| [Snowflake.CortexAI.AgentAction](Snowflake.CortexAI.AgentAction/README.md) | GitHub Action | Bridges GitHub Actions with Cortex Agents, streaming every event plus a final summary for downstream workflow steps. |
-| [Snowflake.CortexAI.AnalystAction](Snowflake.CortexAI.AnalystAction/README.md) | GitHub Action | Connects to Cortex Analyst semantic models/views, exposes optional SQL echoing, and returns structured responses for analytics automation. |
-| [Snowflake.CortexAI.SearchAction](Snowflake.CortexAI.SearchAction/README.md) | GitHub Action | Wraps the Cortex Search REST API with filters, pagination, rerankers, and scoring controls. |
-| [Snowflake.AISQLAction](Snowflake.AISQLAction/README.md) | GitHub Action (WIP) | Reserved space for upcoming AISQL automation; currently only scaffolding is checked in. |
+| Snowflake.Common | Shared TypeScript library | Centralizes `SNOWFLAKE_*` validation, logging controls, and helper APIs (`getSnowflakeConnection`, `runSql`) consumed by every action. |
+| Snowflake.Testing | Validation scripts | Cross-repo build/test harnesses that rebuild shared libraries, package actions, and run local Cortex smoke tests. |
+| Snowflake.RunSQLAction | GitHub Action | Executes SQL end-to-end, applies safe limits, emits CSV/metadata artifacts for large result sets, and leans on the shared library for connectivity. |
+| Snowflake.CortexAI.AgentAction | GitHub Action | Bridges GitHub Actions with Cortex Agents, streaming every event plus a final summary for downstream workflow steps. |
+| Snowflake.CortexAI.AnalystAction | GitHub Action | Connects to Cortex Analyst semantic models/views, exposes optional SQL echoing, and returns structured responses for analytics automation. |
+| Snowflake.CortexAI.SearchAction | GitHub Action | Wraps the Cortex Search REST API with filters, pagination, rerankers, and scoring controls. |
+| Snowflake.AISQLAction | GitHub Action (WIP) | Reserved space for upcoming AISQL automation; currently only scaffolding is checked in. |
 
 ## Azure.AKS.Gitops.Lab
 
