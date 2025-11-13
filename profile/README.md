@@ -15,7 +15,7 @@ This README is the top-level atlas. Each repository underneath ships with its ow
 
 | Path | Focus | Highlights / Notes |
 | --- | --- | --- |
-| [Azure.AKS.Gitops.Lab](../Azure/Azure.AKS.Gitops.Lab/docs/README.md) | Azure Kubernetes Service GitOps lab | Terraform-based cluster bring-up, Helm workloads, Argo CD continuous sync, Ansible automation, observability stack, CLI playbooks, teardown tooling. |
+| [Azure.AKS.Gitops.Lab](../Azure/Azure.AKS.Gitops.Lab/README.md) | Azure Kubernetes Service GitOps lab | Terraform-based cluster bring-up, Helm workloads, Argo CD continuous sync, Ansible automation, observability stack, CLI playbooks, teardown tooling. |
 
 ### Snowflake
 
