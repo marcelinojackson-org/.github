@@ -16,30 +16,30 @@ This README is the top-level atlas. Each repository underneath ships with its ow
 
 | Path | Focus | Highlights / Notes |
 | --- | --- | --- |
-| Azure.AKS.Gitops.Lab | Azure Kubernetes Service GitOps lab | Terraform-based cluster bring-up, Helm workloads, Argo CD continuous sync, Ansible automation, observability stack, CLI playbooks, teardown tooling. |
+| [Azure.AKS.GitOps.Lab](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab) | Azure Kubernetes Service GitOps lab | Terraform-based cluster bring-up, Helm workloads, Argo CD continuous sync, Ansible automation, observability stack, CLI playbooks, teardown tooling. |
 
 ### Snowflake apps, labs, and CLI
 
 | Path | Focus | Highlights / Notes |
 | --- | --- | --- |
-| Snowflake.FrostyStatus | Streamlit dashboard | Snowsight-inspired status board for warehouses, tasks, and jobs with keyboard-friendly exploration. |
-| Snowflake.SPCS.Lab | Snowpark Container Services lab | Containerized ETL demo (`spcs-etl-job/`) with Python loader, Dockerfile, staged sample CSVs, and a job spec wired for Snow CLI + compute pools. |
-| Snowflake.SnowCTL | Operations CLI | Go-based `snowctl` binary with connection lifecycle mgmt, SQL runners, JSON/YAML/CSV/TSV output modes, shell completions, and secure local config. |
-| Snowflake.IAC | Future infrastructure | Empty placeholder for eventual Snowflake IaC assets. |
+| [Snowflake.FrostyStatus](https://github.com/marcelinojackson-org/Snowflake.FrostyStatus) | Streamlit dashboard | Snowsight-inspired status board for warehouses, tasks, and jobs with keyboard-friendly exploration. |
+| [Snowflake.SPCS.Lab](https://github.com/marcelinojackson-org/Snowflake.SPCS.Lab) | Snowpark Container Services lab | Containerized ETL demo (`spcs-etl-job/`) with Python loader, Dockerfile, staged sample CSVs, and a job spec wired for Snow CLI + compute pools. |
+| [Snowflake.SnowCTL](https://github.com/marcelinojackson-org/Snowflake.SnowCTL) | Operations CLI | Go-based `snowctl` binary with connection lifecycle mgmt, SQL runners, JSON/YAML/CSV/TSV output modes, shell completions, and secure local config. |
+| [Snowflake.IAC](https://github.com/marcelinojackson-org/Snowflake.IAC) | Future infrastructure | Empty placeholder for eventual Snowflake IaC assets. |
 
 ### Snowflake GitHub Actions
 
 | Path | Focus | Highlights / Notes |
 | --- | --- | --- |
-| Snowflake.Common | Shared TypeScript library | Centralizes `SNOWFLAKE_*` validation, logging controls, and helper APIs (`getSnowflakeConnection`, `runSql`) consumed by every action. |
-| Snowflake.Testing | Validation scripts | Cross-repo build/test harnesses that rebuild shared libraries, package actions, and run local Cortex smoke tests. |
-| Snowflake.RunSQLAction | GitHub Action | Executes SQL end-to-end, applies safe limits, emits CSV/metadata artifacts for large result sets, and leans on the shared library for connectivity. |
-| Snowflake.CortexAI.AgentAction | GitHub Action | Bridges GitHub Actions with Cortex Agents, streaming every event plus a final summary for downstream workflow steps. |
-| Snowflake.CortexAI.AnalystAction | GitHub Action | Connects to Cortex Analyst semantic models/views, exposes optional SQL echoing, and returns structured responses for analytics automation. |
-| Snowflake.CortexAI.SearchAction | GitHub Action | Wraps the Cortex Search REST API with filters, pagination, rerankers, and scoring controls. |
-| Snowflake.AISQLAction | GitHub Action (WIP) | Reserved space for upcoming AISQL automation; currently only scaffolding is checked in. |
+| [Snowflake.Common](https://github.com/marcelinojackson-org/Snowflake.Common) | Shared TypeScript library | Centralizes `SNOWFLAKE_*` validation, logging controls, and helper APIs (`getSnowflakeConnection`, `runSql`) consumed by every action. |
+| [Snowflake.Testing](https://github.com/marcelinojackson-org/Snowflake.Testing) | Validation scripts | Cross-repo build/test harnesses that rebuild shared libraries, package actions, and run local Cortex smoke tests. |
+| [Snowflake.RunSQLAction](https://github.com/marcelinojackson-org/Snowflake.RunSQLAction) | GitHub Action | Executes SQL end-to-end, applies safe limits, emits CSV/metadata artifacts for large result sets, and leans on the shared library for connectivity. |
+| [Snowflake.CortexAI.AgentAction](https://github.com/marcelinojackson-org/Snowflake.CortexAI.AgentAction) | GitHub Action | Bridges GitHub Actions with Cortex Agents, streaming every event plus a final summary for downstream workflow steps. |
+| [Snowflake.CortexAI.AnalystAction](https://github.com/marcelinojackson-org/Snowflake.CortexAI.AnalystAction) | GitHub Action | Connects to Cortex Analyst semantic models/views, exposes optional SQL echoing, and returns structured responses for analytics automation. |
+| [Snowflake.CortexAI.SearchAction](https://github.com/marcelinojackson-org/Snowflake.CortexAI.SearchAction) | GitHub Action | Wraps the Cortex Search REST API with filters, pagination, rerankers, and scoring controls. |
+| [Snowflake.AISQLAction](https://github.com/marcelinojackson-org/Snowflake.AISQLAction) | GitHub Action (WIP) | Reserved space for upcoming AISQL automation; currently only scaffolding is checked in. |
 
-## Azure.AKS.Gitops.Lab
+## [Azure.AKS.GitOps.Lab](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab)
 
 This lab is designed for repeatable cluster builds, controlled experiments, and demos:
 
@@ -49,7 +49,7 @@ This lab is designed for repeatable cluster builds, controlled experiments, and 
 - **Observability & Testing** – Prometheus and Grafana arrive pre-wired with datasources/dashboards; k6 scripts deliver programmable load; docs walk through port-forwarding and CI triggers.
 - **Operations tooling** – Python scripts under `scripts/` summarize Azure inventory and cost, while `decommission.sh` handles graceful teardown and local cleanup.
 
-See `Azure.AKS.Gitops.Lab/docs/README.md` for diagrams, command references, and troubleshooting guides.
+See `Azure.AKS.GitOps.Lab/docs/README.md` for diagrams, command references, and troubleshooting guides.
 
 ## Snowflake GitHub Actions & Tools
 
@@ -81,9 +81,9 @@ The Snowflake side of the workspace is organized around a few themes.
 
 Each sub-repo’s README dives into installation steps, environment requirements, inputs/outputs, and examples. This overview keeps the spotlight on how the pieces fit together across Azure and Snowflake without duplicating usage content.
 
-## Snowflake.SnowCTL
+## [Snowflake.SnowCTL](https://github.com/marcelinojackson-org/Snowflake.SnowCTL)
 
-`Snowflake/Snowflake.SnowCTL` houses `snowctl`, a Go 1.25.4+ CLI whose root command lives in `cmd/snowctl` and whose shared packages reside under `pkg/`. It wraps the daily workflow of Snowflake operators so scripts, CI jobs, and humans can share the same tooling.
+[Snowflake.SnowCTL](https://github.com/marcelinojackson-org/Snowflake.SnowCTL) houses `snowctl`, a Go 1.25.4+ CLI whose root command lives in `cmd/snowctl` and whose shared packages reside under `pkg/`. It wraps the daily workflow of Snowflake operators so scripts, CI jobs, and humans can share the same tooling.
 
 **Key capabilities**
 
@@ -104,9 +104,9 @@ Each sub-repo’s README dives into installation steps, environment requirements
 - Tests run with `go test ./...`, covering configuration migrations, context enforcement, connection workflows, SQL formatting, and Snowflake mocking.
 - Formatting relies on `gofmt` while release builds inject `Version`, `Commit`, and `Date` via `-ldflags` (see the example command in the repo README).
 
-## Snowflake.SPCS.Lab
+## [Snowflake.SPCS.Lab](https://github.com/marcelinojackson-org/Snowflake.SPCS.Lab)
 
-`Snowflake/Snowflake.SPCS.Lab` currently ships the `spcs-etl-job/` sample, a containerized ETL workload for Snowpark Container Services (SPCS). It demonstrates how to package a Python loader, publish it via Snow CLI, and execute it on a compute pool.
+[Snowflake.SPCS.Lab](https://github.com/marcelinojackson-org/Snowflake.SPCS.Lab) currently ships the `spcs-etl-job/` sample, a containerized ETL workload for Snowpark Container Services (SPCS). It demonstrates how to package a Python loader, publish it via Snow CLI, and execute it on a compute pool.
 
 **What’s inside**
 
