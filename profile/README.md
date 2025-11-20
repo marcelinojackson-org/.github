@@ -27,7 +27,7 @@ This README is the top-level atlas. Each repository underneath ships with its ow
 | [Snowflake.SnowCTL](https://github.com/marcelinojackson-org/Snowflake.SnowCTL) | Operations CLI | Go-based `snowctl` binary with connection lifecycle mgmt, SQL runners, JSON/YAML/CSV/TSV output modes, shell completions, and secure local config. |
 | [Snowflake.IAC](https://github.com/marcelinojackson-org/Snowflake.IAC) | Future infrastructure | Empty placeholder for eventual Snowflake IaC assets. |
 
-### Snowflake GitHub Actions
+### Snowflake GitHub Actions ([Medium Article](https://medium.com/@mjmarc.common/shipping-ai-powered-snowflake-workflows-with-github-actions-eeb3fe07a354))
 
 | Path | Focus | Highlights / Notes |
 | --- | --- | --- |
