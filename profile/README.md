@@ -24,6 +24,7 @@ This README is the top-level atlas. Each repository underneath ships with its ow
 | --- | --- | --- |
 | [Snowflake.FrostyStatus](https://github.com/marcelinojackson-org/Snowflake.FrostyStatus) | Streamlit dashboard | Snowsight-inspired status board for warehouses, tasks, and jobs with keyboard-friendly exploration. |
 | [Snowflake.SPCS.Lab](https://github.com/marcelinojackson-org/Snowflake.SPCS.Lab) | Snowpark Container Services lab | Containerized ETL demo (`spcs-etl-job/`) with Python loader, Dockerfile, staged sample CSVs, and a job spec wired for Snow CLI + compute pools. |
+| [snow9s](https://github.com/marcelinojackson-org/snow9s) | SPCS terminal dashboard | k9s-style TUI for Snowpark Container Services with fast keyboard nav, live refresh, and config via `SNOWFLAKE_*` env vars or `~/.snow9s/config.yaml`. |
 | [Snowflake.SnowCTL](https://github.com/marcelinojackson-org/Snowflake.SnowCTL) | Operations CLI | Go-based `snowctl` binary with connection lifecycle mgmt, SQL runners, JSON/YAML/CSV/TSV output modes, shell completions, and secure local config. |
 | [Snowflake.IAC](https://github.com/marcelinojackson-org/Snowflake.IAC) | Future infrastructure | Empty placeholder for eventual Snowflake IaC assets. |
 
@@ -116,3 +117,11 @@ Each sub-repo’s README dives into installation steps, environment requirements
 - `job_spec.yaml` – declares the runtime container (`etl-main`), registry path, and environment variables (`SNOWFLAKE_ACCOUNT`, `SNOWFLAKE_HOST`, `SNOWFLAKE_DATABASE`, `SNOWFLAKE_SCHEMA`, `SNOWFLAKE_WAREHOUSE`, `INPUT_STAGE`, `TARGET_TABLE`) consumed by the script.
 
 Use Snow CLI to stage the CSV sample, build/push the container, and create or run the job spec against your compute pool; the README inside `spcs-etl-job/` documents the scope and Snow CLI-driven workflow. The pattern leaves room for additional labs inside this repo as new SPCS experiments grow past prototype stage.
+
+## [snow9s](https://github.com/marcelinojackson-org/snow9s)
+
+[snow9s](https://github.com/marcelinojackson-org/snow9s) is a k9s-style terminal UI focused on Snowpark Container Services. It refreshes service listings every few seconds, exposes `snow9s list services` for a non-TUI path, and keeps navigation keyboard-first (`j/k`, `/`, `Ctrl+r`, `?` for help).
+
+- **Configuration** – Reads `SNOWFLAKE_*` env vars or `~/.snow9s/config.yaml` contexts; writes `~/.snow9s/env` on first run so you can fill in values without exporting globally.
+- **Focus areas** – Surfaces services, compute pools, status, and resource age with contextual headers and a debug pane that shows executed Snowflake queries.
+- **Build/test** – `make build` (drops `./bin/snow9s`) and `make test` (`go test ./...`) cover local validation; Go 1.22+ required.
