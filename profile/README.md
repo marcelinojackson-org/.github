@@ -1,10 +1,11 @@
 # Marcelino’s OSS Public Portfolio
 
-This workspace curates my published OSS projects across Azure infrastructure, Snowflake GitHub Actions, and Snowflake labs/tools—with room for additional stacks as they go public.
+This workspace curates my published OSS projects across Azure infrastructure, DevSecOps pipelines, Snowflake GitHub Actions, and Snowflake labs/tools—with room for additional stacks as they go public.
 
 Current highlights:
 
 - **Azure** – a complete AKS GitOps reference implementation that spans Terraform, Helm, Argo CD, Ansible, Prometheus/Grafana, and k6.
+- **DevSecOps CDC demo** – a local MySQL → Kafka (Debezium) → Postgres pipeline with Docker Compose, Kafka UI visibility, and seed data for validation.
 - **Snowflake GitHub Actions** – a family of GitHub Actions, helper libraries, and testing harnesses that showcase Cortex AI integrations plus day‑to‑day operational tooling.
 - **Snowflake labs and tooling** – Snowpark Container Services demos (`Snowflake.SPCS.Lab`), the `snow9s` TUI, and a reserved IaC track ready to house future assets.
 
@@ -17,6 +18,12 @@ This README is the top-level atlas. Each repository underneath ships with its ow
 | Path | Focus | Highlights / Notes |
 | --- | --- | --- |
 | [Azure.AKS.GitOps.Lab](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab) | Azure Kubernetes Service GitOps lab | Terraform-based cluster bring-up, Helm workloads, Argo CD continuous sync, Ansible automation, observability stack, CLI playbooks, teardown tooling. |
+
+### DevSecOps
+
+| Path | Focus | Highlights / Notes |
+| --- | --- | --- |
+| [DevSecOps.CDCDemo](https://github.com/marcelinojackson-org/DevSecOps.CDCDemo) | CDC pipeline demo | MySQL source with Debezium CDC into Kafka, JDBC sink into Postgres, Kafka UI for visibility, seeded datasets for quick validation. |
 
 ### Snowflake labs and tooling
 
