@@ -6,6 +6,7 @@ Current highlights:
 
 - **Azure** – a complete AKS GitOps reference implementation that spans Terraform, Helm, Argo CD, Ansible, Prometheus/Grafana, and k6.
 - **DevSecOps CDC demo** – a local MySQL → Kafka (Debezium) → Postgres pipeline with Docker Compose, Kafka UI visibility, and seed data for validation.
+- **DevSecOps security demo** – SAST/SCA pipeline live now; DAST workflow in progress.
 - **Snowflake GitHub Actions** – a family of GitHub Actions, helper libraries, and testing harnesses that showcase Cortex AI integrations plus day‑to‑day operational tooling.
 - **Snowflake labs and tooling** – Snowpark Container Services demos (`Snowflake.SPCS.Lab`), the `snow9s` TUI, and a reserved IaC track ready to house future assets.
 
@@ -24,6 +25,7 @@ This README is the top-level atlas. Each repository underneath ships with its ow
 | Path | Focus | Highlights / Notes |
 | --- | --- | --- |
 | [DevSecOps.CDCDemo](https://github.com/marcelinojackson-org/DevSecOps.CDCDemo) | CDC pipeline demo | MySQL source with Debezium CDC into Kafka, JDBC sink into Postgres, Kafka UI for visibility, seeded datasets for quick validation. |
+| [DevSecOps.SecurityDemo](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo) | Security pipeline demo | SAST + SCA implemented (manual-only); DAST workflow in progress. |
 
 ### Snowflake labs and tooling
 
@@ -56,6 +58,20 @@ I built this lab for repeatable cluster builds, controlled experiments, and demo
 - **Operations tooling** – Python scripts under `scripts/` summarize Azure inventory and cost, while `decommission.sh` handles graceful teardown and local cleanup.
 
 See `Azure.AKS.GitOps.Lab/README.md`, `Azure.AKS.GitOps.Lab/docs/diagrams/`, and `Azure.AKS.GitOps.Lab/docs/troubleshooting.md` for diagrams, command references, and troubleshooting guides.
+
+## [DevSecOps.SecurityDemo](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo)
+
+This repo is a security testing demo built on the deliberately vulnerable AspGoat app, split into dedicated pipeline repos so each workflow can be run and explained independently.
+
+**What’s inside**
+
+- **SAST + SCA pipelines** – manual-only GitHub Actions workflows using Snyk Code (static analysis) and Snyk Open Source (dependency analysis).
+- **Code Scanning outputs** – SARIF uploads land in GitHub Code Scanning with separate categories for SAST and SCA.
+- **Artifacts for audit** – timestamped SARIF + JSON artifacts for both scans.
+- **Runbook + screenshots** – a `docs/sast.md` runbook plus a Code Scanning screenshot for demo walkthroughs.
+- **DAST (WIP)** – planned runtime scanning pipeline to follow.
+
+Start with `DevSecOps.SecurityDemo/README.md` and the detailed runbook at `DevSecOps.SecurityDemo/docs/sast.md`.
 
 ## Snowflake GitHub Actions & Tools
 
