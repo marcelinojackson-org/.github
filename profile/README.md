@@ -6,11 +6,15 @@ Current highlights:
 
 - **Azure** – a complete AKS GitOps reference implementation that spans Terraform, Helm, Argo CD, Ansible, Prometheus/Grafana, and k6.
 - **DevSecOps CDC demo** – a local MySQL → Kafka (Debezium) → Postgres pipeline with Docker Compose, Kafka UI visibility, and seed data for validation.
-- **DevSecOps security demo** – SAST/SCA pipeline live now; DAST workflow in progress.
+- **DevSecOps Security demo** – SAST/SCA pipeline live now; DAST workflow in progress.
 - **Snowflake GitHub Actions** – a family of GitHub Actions, helper libraries, and testing harnesses that showcase Cortex AI integrations plus day‑to‑day operational tooling.
 - **Snowflake labs and tooling** – Snowpark Container Services demos (`Snowflake.SPCS.Lab`), the `snow9s` TUI, and a reserved IaC track ready to house future assets.
 
 This README is the top-level atlas. Each repository underneath ships with its own README for installation or usage details.
+
+## Technology Word Cloud
+
+![Open Source technology word cloud](assets/wordcloud/oss-tech-wordcloud-v1-1.png)
 
 ## Portfolio map
 
