@@ -36,7 +36,7 @@ This README is the top-level atlas. Each repository underneath ships with its ow
 | [Snowflake.CortexAI.AgentAction](https://github.com/marcelinojackson-org/Snowflake.CortexAI.AgentAction) | GitHub Action | Bridges GitHub Actions with Cortex Agents, streaming every event plus a final summary for downstream workflow steps. |
 | [Snowflake.CortexAI.AnalystAction](https://github.com/marcelinojackson-org/Snowflake.CortexAI.AnalystAction) | GitHub Action | Connects to Cortex Analyst semantic models/views, exposes optional SQL echoing, and returns structured responses for analytics automation. |
 | [Snowflake.CortexAI.SearchAction](https://github.com/marcelinojackson-org/Snowflake.CortexAI.SearchAction) | GitHub Action | Wraps the Cortex Search REST API with filters, pagination, rerankers, and scoring controls. |
-| [Snowflake.AISQLAction](https://github.com/marcelinojackson-org/Snowflake.AISQLAction) | GitHub Action (WIP) | Reserved space for upcoming AISQL automation; currently only scaffolding is checked in. |
+| [Snowflake.AISQLAction](https://github.com/marcelinojackson-org/Snowflake.AISQLAction) | GitHub Action | Runs Cortex AISQL functions like `AI_COMPLETE`, `AI_EXTRACT`, `AI_SENTIMENT`, `AI_CLASSIFY`, `AI_COUNT_TOKENS`, `AI_EMBED`, `AI_SIMILARITY`, `AI_SUMMARIZE`, `AI_TRANSLATE`, and `AI_PARSE_DOCUMENT`. |
 
 ## [Azure.AKS.GitOps.Lab](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab)
 
@@ -63,7 +63,7 @@ The Snowflake side of the workspace is organized around a few themes.
 - **`Snowflake.CortexAI.AgentAction`** – drives Cortex Agents conversations from CI/CD, capturing both the answer text and every streamed event so workflows can branch on intermediate reasoning or tool invocations.
 - **`Snowflake.CortexAI.AnalystAction`** – fronts Cortex Analyst semantic models and semantic views, making it easy to wire natural-language analytics questions into CI pipelines or scheduled jobs.
 - **`Snowflake.CortexAI.SearchAction`** – exposes Cortex Search with optional filters, pagination, reranking, score thresholds, and field selection for targeted retrieval use cases.
-- **`Snowflake.AISQLAction`** – upcoming AISQL-first action (currently a placeholder). Tracking lives here so downstream repos can reference the path ahead of implementation.
+- **`Snowflake.AISQLAction`** – AISQL-first action that executes Cortex AI SQL functions with JSON payloads and returns structured outputs for workflows.
 
 ### 3. Core SQL execution
 
