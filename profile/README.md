@@ -8,7 +8,7 @@ Current highlights:
 - **DevSecOps CDC demo** – a local MySQL → Kafka (Debezium) → Postgres pipeline with Docker Compose, Kafka UI visibility, and seed data for validation.
 - **DevSecOps Security demo** – SAST/SCA pipeline live now; DAST workflow in progress.
 - **Snowflake GitHub Actions** – a family of GitHub Actions, helper libraries, and testing harnesses that showcase Cortex AI integrations plus day‑to‑day operational tooling.
-- **Snowflake labs and tooling** – Snowpark Container Services demos (`Snowflake.SPCS.Lab`), the `snow9s` TUI, and a reserved IaC track ready to house future assets.
+- **Snowflake labs and tooling** – Snowpark Container Services demos ([Snowflake.SPCS.Lab](https://github.com/marcelinojackson-org/Snowflake.SPCS.Lab)), the [snow9s](https://github.com/marcelinojackson-org/snow9s) TUI, and a reserved IaC track ([Snowflake.IAC](https://github.com/marcelinojackson-org/Snowflake.IAC)) ready to house future assets.
 
 This README is the top-level atlas. Each repository underneath ships with its own README for installation or usage details.
 
@@ -61,7 +61,7 @@ I built this lab for repeatable cluster builds, controlled experiments, and demo
 - **Observability & Testing** – Prometheus and Grafana arrive pre-wired with datasources/dashboards; k6 scripts deliver programmable load; docs walk through port-forwarding and CI triggers.
 - **Operations tooling** – Python scripts under `scripts/` summarize Azure inventory and cost, while `decommission.sh` handles graceful teardown and local cleanup.
 
-See `Azure.AKS.GitOps.Lab/README.md`, `Azure.AKS.GitOps.Lab/docs/diagrams/`, and `Azure.AKS.GitOps.Lab/docs/troubleshooting.md` for diagrams, command references, and troubleshooting guides.
+See [Azure.AKS.GitOps.Lab](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab) `README.md`, `docs/diagrams/`, and `docs/troubleshooting.md` for diagrams, command references, and troubleshooting guides.
 
 ## [DevSecOps.SecurityDemo](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo)
 
@@ -75,7 +75,7 @@ This repo is a security testing demo built on the deliberately vulnerable AspGoa
 - **Runbook + screenshots** – a `docs/sast.md` runbook plus a Code Scanning screenshot for demo walkthroughs.
 - **DAST (WIP)** – planned runtime scanning pipeline to follow.
 
-Start with `DevSecOps.SecurityDemo/README.md` and the detailed runbook at `DevSecOps.SecurityDemo/docs/sast.md`.
+Start with [DevSecOps.SecurityDemo](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo) `README.md` and the detailed runbook at `docs/sast.md`.
 
 ## Snowflake GitHub Actions & Tools
 
@@ -83,26 +83,26 @@ The Snowflake side of the workspace is organized around a few themes.
 
 ### 1. Shared foundation
 
-- **`Snowflake.Common`** – guards against misconfigured environments, standardizes connection telemetry, and exposes reusable helpers for SQL execution. Actions depend on the published package and bundle it locally for Marketplace releases.
+- **[`Snowflake.Common`](https://github.com/marcelinojackson-org/Snowflake.Common)** – guards against misconfigured environments, standardizes connection telemetry, and exposes reusable helpers for SQL execution. Actions depend on the published package and bundle it locally for Marketplace releases.
 
 ### 2. Cortex AI automation
 
-- **`Snowflake.CortexAI.AgentAction`** – drives Cortex Agents conversations from CI/CD, capturing both the answer text and every streamed event so workflows can branch on intermediate reasoning or tool invocations.
-- **`Snowflake.CortexAI.AnalystAction`** – fronts Cortex Analyst semantic models and semantic views, making it easy to wire natural-language analytics questions into CI pipelines or scheduled jobs.
-- **`Snowflake.CortexAI.SearchAction`** – exposes Cortex Search with optional filters, pagination, reranking, score thresholds, and field selection for targeted retrieval use cases.
-- **`Snowflake.AISQLAction`** – AISQL-first action that executes Cortex AI SQL functions with JSON payloads and returns structured outputs for workflows.
+- **[`Snowflake.CortexAI.AgentAction`](https://github.com/marcelinojackson-org/Snowflake.CortexAI.AgentAction)** – drives Cortex Agents conversations from CI/CD, capturing both the answer text and every streamed event so workflows can branch on intermediate reasoning or tool invocations.
+- **[`Snowflake.CortexAI.AnalystAction`](https://github.com/marcelinojackson-org/Snowflake.CortexAI.AnalystAction)** – fronts Cortex Analyst semantic models and semantic views, making it easy to wire natural-language analytics questions into CI pipelines or scheduled jobs.
+- **[`Snowflake.CortexAI.SearchAction`](https://github.com/marcelinojackson-org/Snowflake.CortexAI.SearchAction)** – exposes Cortex Search with optional filters, pagination, reranking, score thresholds, and field selection for targeted retrieval use cases.
+- **[`Snowflake.AISQLAction`](https://github.com/marcelinojackson-org/Snowflake.AISQLAction)** – AISQL-first action that executes Cortex AI SQL functions with JSON payloads and returns structured outputs for workflows.
 
 ### 3. Core SQL execution
 
-- **`Snowflake.RunSQLAction`** – the baseline action for running SQL inside GitHub workflows. It enforces sensible `LIMIT`s, supports artifact persistence (CSV + metadata), and prints compact run summaries for small queries.
+- **[`Snowflake.RunSQLAction`](https://github.com/marcelinojackson-org/Snowflake.RunSQLAction)** – the baseline action for running SQL inside GitHub workflows. It enforces sensible `LIMIT`s, supports artifact persistence (CSV + metadata), and prints compact run summaries for small queries.
 
 ### 4. Operational dashboards & validation tooling
 
-- **`Snowflake.Testing`** – bash-based harnesses that rebuild `Snowflake.Common`, package each action locally, and execute representative smoke tests (RunSQL, Cortex Search, Cortex Analyst, Cortex Agent) against a developer’s Snowflake account to catch regressions before publishing.
+- **[`Snowflake.Testing`](https://github.com/marcelinojackson-org/Snowflake.Testing)** – bash-based harnesses that rebuild `Snowflake.Common`, package each action locally, and execute representative smoke tests (RunSQL, Cortex Search, Cortex Analyst, Cortex Agent) against a developer’s Snowflake account to catch regressions before publishing.
 
 ### 5. Future expansion
 
-- **`Snowflake.IAC`** – intentionally blank for now so new infrastructure-as-code modules can land without reworking repo layout later.
+- **[`Snowflake.IAC`](https://github.com/marcelinojackson-org/Snowflake.IAC)** – intentionally blank for now so new infrastructure-as-code modules can land without reworking repo layout later.
 
 Each sub-repo’s README dives into installation steps, environment requirements, inputs/outputs, and examples. This overview keeps the spotlight on how the pieces fit together across Azure and Snowflake without duplicating usage content.
 
