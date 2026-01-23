@@ -8,7 +8,7 @@ Current highlights:
 - **DevSecOps CDC demo** – a local MySQL → Kafka (Debezium) → Postgres pipeline with Docker Compose, Kafka UI visibility, and seed data for validation.
 - **DevSecOps Security demo** – SAST/SCA + DAST (OWASP ZAP) pipelines, manual-only for demo control.
 - **Snowflake GitHub Actions** – a family of GitHub Actions, helper libraries, and testing harnesses that showcase Cortex AI integrations plus day‑to‑day operational tooling.
-- **Snowflake labs and tooling** – Snowpark Container Services demos ([Snowflake.SPCS.Lab](https://github.com/marcelinojackson-org/Snowflake.SPCS.Lab)), the [snow9s](https://github.com/marcelinojackson-org/snow9s) TUI, and a reserved IaC track ([Snowflake.IAC](https://github.com/marcelinojackson-org/Snowflake.IAC)) ready to house future assets.
+- **Snowflake labs and tooling** – Snowpark Container Services demos ([`Snowflake.SPCS.Lab`](https://github.com/marcelinojackson-org/Snowflake.SPCS.Lab)), the [`snow9s`](https://github.com/marcelinojackson-org/snow9s) TUI, and a reserved IaC track ([`Snowflake.IAC`](https://github.com/marcelinojackson-org/Snowflake.IAC)) ready to house future assets.
 
 This README is the top-level atlas. Each repository underneath ships with its own README for installation or usage details.
 
@@ -22,36 +22,36 @@ This README is the top-level atlas. Each repository underneath ships with its ow
 
 | Path | Focus | Highlights / Notes |
 | --- | --- | --- |
-| [Azure.AKS.GitOps.Lab](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab) | Azure Kubernetes Service GitOps lab | Terraform-based cluster bring-up, Helm workloads, Argo CD continuous sync, Ansible automation, observability stack, CLI playbooks, teardown tooling. |
+| [`Azure.AKS.GitOps.Lab`](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab) | Azure Kubernetes Service GitOps lab | Terraform-based cluster bring-up, Helm workloads, Argo CD continuous sync, Ansible automation, observability stack, CLI playbooks, teardown tooling. |
 
 ### DevSecOps
 
 | Path | Focus | Highlights / Notes |
 | --- | --- | --- |
-| [DevSecOps.CDCDemo](https://github.com/marcelinojackson-org/DevSecOps.CDCDemo) | CDC pipeline demo | MySQL source with Debezium CDC into Kafka, JDBC sink into Postgres, Kafka UI for visibility, seeded datasets for quick validation. |
-| [DevSecOps.SecurityDemo](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo) | Security pipeline demo | SAST + SCA (manual-only) plus DAST (OWASP ZAP full scan) with artifacts, screenshots, and tuning rules. |
+| [`DevSecOps.CDCDemo`](https://github.com/marcelinojackson-org/DevSecOps.CDCDemo) | CDC pipeline demo | MySQL source with Debezium CDC into Kafka, JDBC sink into Postgres, Kafka UI for visibility, seeded datasets for quick validation. |
+| [`DevSecOps.SecurityDemo`](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo) | Security pipeline demo | SAST + SCA (manual-only) plus DAST (OWASP ZAP full scan) with artifacts, screenshots, and tuning rules. |
 
 ### Snowflake labs and tooling
 
 | Path | Focus | Highlights / Notes |
 | --- | --- | --- |
-| [Snowflake.SPCS.Lab](https://github.com/marcelinojackson-org/Snowflake.SPCS.Lab) | Snowpark Container Services lab | Containerized ETL demo (`spcs-etl-job/`) with Python loader, Dockerfile, staged sample CSVs, and a job spec wired for Snow CLI + compute pools. |
-| [snow9s](https://github.com/marcelinojackson-org/snow9s) | SPCS terminal dashboard | k9s-style TUI for Snowpark Container Services with fast keyboard nav, live refresh, and config via `SNOWFLAKE_*` env vars or `~/.snow9s/config.yaml`. |
-| [Snowflake.IAC](https://github.com/marcelinojackson-org/Snowflake.IAC) | Future infrastructure | Empty placeholder for eventual Snowflake IaC assets. |
+| [`Snowflake.SPCS.Lab`](https://github.com/marcelinojackson-org/Snowflake.SPCS.Lab) | Snowpark Container Services lab | Containerized ETL demo (`spcs-etl-job/`) with Python loader, Dockerfile, staged sample CSVs, and a job spec wired for Snow CLI + compute pools. |
+| [`snow9s`](https://github.com/marcelinojackson-org/snow9s) | SPCS terminal dashboard | k9s-style TUI for Snowpark Container Services with fast keyboard nav, live refresh, and config via `SNOWFLAKE_*` env vars or `~/.snow9s/config.yaml`. |
+| [`Snowflake.IAC`](https://github.com/marcelinojackson-org/Snowflake.IAC) | Future infrastructure | Empty placeholder for eventual Snowflake IaC assets. |
 
 ### Snowflake GitHub Actions ([Medium Article](https://medium.com/@mjmarc.common/shipping-ai-powered-snowflake-workflows-with-github-actions-eeb3fe07a354))
 
 | Path | Focus | Highlights / Notes |
 | --- | --- | --- |
-| [Snowflake.Common](https://github.com/marcelinojackson-org/Snowflake.Common) | Shared TypeScript library | Centralizes `SNOWFLAKE_*` validation, logging controls, and helper APIs (`getSnowflakeConnection`, `runSql`) consumed by every action. |
-| [Snowflake.Testing](https://github.com/marcelinojackson-org/Snowflake.Testing) | Validation scripts | Cross-repo build/test harnesses that rebuild shared libraries, package actions, and run local Cortex smoke tests. |
-| [Snowflake.RunSQLAction](https://github.com/marcelinojackson-org/Snowflake.RunSQLAction) | GitHub Action | Executes SQL end-to-end, applies safe limits, emits CSV/metadata artifacts for large result sets, and leans on the shared library for connectivity. |
-| [Snowflake.CortexAI.AgentAction](https://github.com/marcelinojackson-org/Snowflake.CortexAI.AgentAction) | GitHub Action | Bridges GitHub Actions with Cortex Agents, streaming every event plus a final summary for downstream workflow steps. |
-| [Snowflake.CortexAI.AnalystAction](https://github.com/marcelinojackson-org/Snowflake.CortexAI.AnalystAction) | GitHub Action | Connects to Cortex Analyst semantic models/views, exposes optional SQL echoing, and returns structured responses for analytics automation. |
-| [Snowflake.CortexAI.SearchAction](https://github.com/marcelinojackson-org/Snowflake.CortexAI.SearchAction) | GitHub Action | Wraps the Cortex Search REST API with filters, pagination, rerankers, and scoring controls. |
-| [Snowflake.AISQLAction](https://github.com/marcelinojackson-org/Snowflake.AISQLAction) | GitHub Action | Runs Cortex AISQL functions like `AI_COMPLETE`, `AI_EXTRACT`, `AI_SENTIMENT`, `AI_CLASSIFY`, `AI_COUNT_TOKENS`, `AI_EMBED`, `AI_SIMILARITY`, `AI_SUMMARIZE`, `AI_TRANSLATE`, and `AI_PARSE_DOCUMENT`. |
+| [`Snowflake.Common`](https://github.com/marcelinojackson-org/Snowflake.Common) | Shared TypeScript library | Centralizes `SNOWFLAKE_*` validation, logging controls, and helper APIs (`getSnowflakeConnection`, `runSql`) consumed by every action. |
+| [`Snowflake.Testing`](https://github.com/marcelinojackson-org/Snowflake.Testing) | Validation scripts | Cross-repo build/test harnesses that rebuild shared libraries, package actions, and run local Cortex smoke tests. |
+| [`Snowflake.RunSQLAction`](https://github.com/marcelinojackson-org/Snowflake.RunSQLAction) | GitHub Action | Executes SQL end-to-end, applies safe limits, emits CSV/metadata artifacts for large result sets, and leans on the shared library for connectivity. |
+| [`Snowflake.CortexAI.AgentAction`](https://github.com/marcelinojackson-org/Snowflake.CortexAI.AgentAction) | GitHub Action | Bridges GitHub Actions with Cortex Agents, streaming every event plus a final summary for downstream workflow steps. |
+| [`Snowflake.CortexAI.AnalystAction`](https://github.com/marcelinojackson-org/Snowflake.CortexAI.AnalystAction) | GitHub Action | Connects to Cortex Analyst semantic models/views, exposes optional SQL echoing, and returns structured responses for analytics automation. |
+| [`Snowflake.CortexAI.SearchAction`](https://github.com/marcelinojackson-org/Snowflake.CortexAI.SearchAction) | GitHub Action | Wraps the Cortex Search REST API with filters, pagination, rerankers, and scoring controls. |
+| [`Snowflake.AISQLAction`](https://github.com/marcelinojackson-org/Snowflake.AISQLAction) | GitHub Action | Runs Cortex AISQL functions like `AI_COMPLETE`, `AI_EXTRACT`, `AI_SENTIMENT`, `AI_CLASSIFY`, `AI_COUNT_TOKENS`, `AI_EMBED`, `AI_SIMILARITY`, `AI_SUMMARIZE`, `AI_TRANSLATE`, and `AI_PARSE_DOCUMENT`. |
 
-## [Azure.AKS.GitOps.Lab](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab)
+## [`Azure.AKS.GitOps.Lab`](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab)
 
 I built this lab for repeatable cluster builds, controlled experiments, and demos:
 
@@ -61,9 +61,9 @@ I built this lab for repeatable cluster builds, controlled experiments, and demo
 - **Observability & Testing** – Prometheus and Grafana arrive pre-wired with datasources/dashboards; k6 scripts deliver programmable load; docs walk through port-forwarding and CI triggers.
 - **Operations tooling** – Python scripts under `scripts/` summarize Azure inventory and cost, while `decommission.sh` handles graceful teardown and local cleanup.
 
-See [Azure.AKS.GitOps.Lab](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab) `README.md`, `docs/diagrams/`, and `docs/troubleshooting.md` for diagrams, command references, and troubleshooting guides.
+See [`Azure.AKS.GitOps.Lab`](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab) `README.md`, `docs/diagrams/`, and `docs/troubleshooting.md` for diagrams, command references, and troubleshooting guides.
 
-## [DevSecOps.SecurityDemo](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo)
+## [`DevSecOps.SecurityDemo`](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo)
 
 This repo is a security testing demo built on the deliberately vulnerable AspGoat app, split into dedicated pipeline repos so each workflow can be run and explained independently.
 
@@ -75,7 +75,7 @@ This repo is a security testing demo built on the deliberately vulnerable AspGoa
 - **Runbook + screenshots** – a `docs/sast.md` runbook plus a Code Scanning screenshot for demo walkthroughs.
 - **DAST (OWASP ZAP)** – manual full scan workflow with auth, spider depth hook, rules TSV tuning, and sample reports/screenshots.
 
-Start with [DevSecOps.SecurityDemo](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo) `README.md` and the runbooks at `docs/sast.md` and `docs/dast.md`.
+Start with [`DevSecOps.SecurityDemo`](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo) `README.md` and the runbooks at `docs/sast.md` and `docs/dast.md`.
 
 ## Snowflake GitHub Actions & Tools
 
@@ -106,7 +106,7 @@ The Snowflake side of the workspace is organized around a few themes.
 
 Each sub-repo’s README dives into installation steps, environment requirements, inputs/outputs, and examples. This overview keeps the spotlight on how the pieces fit together across Azure and Snowflake without duplicating usage content.
 
-## [Snowflake.SPCS.Lab](https://github.com/marcelinojackson-org/Snowflake.SPCS.Lab)
+## [`Snowflake.SPCS.Lab`](https://github.com/marcelinojackson-org/Snowflake.SPCS.Lab)
 
 This repo currently ships the `spcs-etl-job/` sample, a containerized ETL workload for Snowpark Container Services (SPCS). It demonstrates how to package a Python loader, publish it via Snow CLI, and execute it on a compute pool.
 
@@ -119,9 +119,9 @@ This repo currently ships the `spcs-etl-job/` sample, a containerized ETL worklo
 
 Use Snow CLI to stage the CSV sample, build/push the container, and create or run the job spec against your compute pool; the README inside `spcs-etl-job/` documents the scope and Snow CLI-driven workflow. The pattern leaves room for additional labs inside this repo as new SPCS experiments grow past prototype stage.
 
-## [snow9s](https://github.com/marcelinojackson-org/snow9s)
+## [`snow9s`](https://github.com/marcelinojackson-org/snow9s)
 
-[snow9s](https://github.com/marcelinojackson-org/snow9s) is a k9s-style terminal UI focused on Snowpark Container Services. It refreshes service listings every few seconds, exposes `snow9s list services` for a non-TUI path, and keeps navigation keyboard-first (`j/k`, `/`, `Ctrl+r`, `?` for help).
+[`snow9s`](https://github.com/marcelinojackson-org/snow9s) is a k9s-style terminal UI focused on Snowpark Container Services. It refreshes service listings every few seconds, exposes `snow9s list services` for a non-TUI path, and keeps navigation keyboard-first (`j/k`, `/`, `Ctrl+r`, `?` for help).
 
 - **Configuration** – Reads `SNOWFLAKE_*` env vars or `~/.snow9s/config.yaml` contexts; writes `~/.snow9s/env` on first run so you can fill in values without exporting globally.
 - **Focus areas** – Surfaces services, compute pools, status, and resource age with contextual headers and a debug pane that shows executed Snowflake queries.
