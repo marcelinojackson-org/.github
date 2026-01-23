@@ -6,7 +6,7 @@ Current highlights:
 
 - **Azure** – a complete AKS GitOps reference implementation that spans Terraform, Helm, Argo CD, Ansible, Prometheus/Grafana, and k6.
 - **DevSecOps CDC demo** – a local MySQL → Kafka (Debezium) → Postgres pipeline with Docker Compose, Kafka UI visibility, and seed data for validation.
-- **DevSecOps Security demo** – SAST/SCA + DAST (OWASP ZAP) pipelines, manual-only for demo control.
+- **DevSecOps Security demo** – SAST/SCA, SCAScan (Trivy SBOM), and DAST (OWASP ZAP) pipelines, manual-only for demo control.
 - **Snowflake GitHub Actions** – a family of GitHub Actions, helper libraries, and testing harnesses that showcase Cortex AI integrations plus day‑to‑day operational tooling.
 - **Snowflake labs and tooling** – Snowpark Container Services demos ([`Snowflake.SPCS.Lab`](https://github.com/marcelinojackson-org/Snowflake.SPCS.Lab)), the [`snow9s`](https://github.com/marcelinojackson-org/snow9s) TUI, and a reserved IaC track ([`Snowflake.IAC`](https://github.com/marcelinojackson-org/Snowflake.IAC)) ready to house future assets.
 
@@ -29,7 +29,7 @@ This README is the top-level atlas. Each repository underneath ships with its ow
 | Path | Focus | Highlights / Notes |
 | --- | --- | --- |
 | [`DevSecOps.CDCDemo`](https://github.com/marcelinojackson-org/DevSecOps.CDCDemo) | CDC pipeline demo | MySQL source with Debezium CDC into Kafka, JDBC sink into Postgres, Kafka UI for visibility, seeded datasets for quick validation. |
-| [`DevSecOps.SecurityDemo`](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo) | Security pipeline demo | SAST + SCA (manual-only) plus DAST (OWASP ZAP full scan) with artifacts, screenshots, and tuning rules. |
+| [`DevSecOps.SecurityDemo`](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo) | Security pipeline demo | SAST + SCA (manual-only), SCAScan (Trivy SBOM), plus DAST (OWASP ZAP full scan) with artifacts, screenshots, and tuning rules. |
 
 ### Snowflake labs and tooling
 
@@ -69,13 +69,11 @@ This repo is a security testing demo built on the deliberately vulnerable AspGoa
 
 **What’s inside**
 
-- **SAST + SCA pipelines** – manual-only GitHub Actions workflows using Snyk Code (static analysis) and Snyk Open Source (dependency analysis).
-- **Code Scanning outputs** – SARIF uploads land in GitHub Code Scanning with separate categories for SAST and SCA.
-- **Artifacts for audit** – timestamped SARIF + JSON artifacts for both scans.
-- **Runbook + screenshots** – a `docs/sast.md` runbook plus a Code Scanning screenshot for demo walkthroughs.
+- **SAST + SCA pipelines** – manual-only Snyk Code + Snyk Open Source (source dependency manifests) with SARIF in GitHub Code Scanning, timestamped SARIF/JSON artifacts, and a `docs/sast.md` runbook + screenshot for demos.
+- **SCAScan (Trivy SBOM)** – manual image scan that emits a CycloneDX SBOM and critical summary for OS packages and bundled dependencies.
 - **DAST (OWASP ZAP)** – manual full scan workflow with auth, spider depth hook, rules TSV tuning, and sample reports/screenshots.
 
-Start with [`DevSecOps.SecurityDemo`](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo) `README.md` and the runbooks at `docs/sast.md` and `docs/dast.md`.
+Start with [`DevSecOps.SecurityDemo`](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo) `README.md` and the runbooks at `docs/sast.md`, `docs/sca-scan.md`, and `docs/dast.md`.
 
 ## Snowflake GitHub Actions & Tools
 
