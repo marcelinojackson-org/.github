@@ -145,3 +145,7 @@ Start with the repo `README.md` for setup, configuration, and CLI command usage.
 - **Configuration** – Reads `SNOWFLAKE_*` env vars or `~/.snow9s/config.yaml` contexts; writes `~/.snow9s/env` on first run so you can fill in values without exporting globally.
 - **Focus areas** – Surfaces services, compute pools, status, and resource age with contextual headers and a debug pane that shows executed Snowflake queries.
 - **Build/test** – `make build` (drops `./bin/snow9s`) and `make test` (`go test ./...`) cover local validation; Go 1.22+ required.
+
+## Welcome
+
+Feel free to browse, explore, download, or comment. Feedback is always welcome.
