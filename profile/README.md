@@ -7,6 +7,7 @@ Current highlights:
 - **Azure** – a complete AKS GitOps reference implementation that spans Terraform, Helm, Argo CD, Ansible, Prometheus/Grafana, and k6.
 - **DevSecOps CDC demo** – a local MySQL → Kafka (Debezium) → Postgres pipeline with Docker Compose, Kafka UI visibility, and seed data for validation.
 - **DevSecOps Security demo** – SAST/SCA, SCAScan (Trivy SBOM), and DAST (OWASP ZAP) pipelines, manual-only for demo control.
+- **AIML RAG Ops Lab (Work in Progress)** – a local LangChain + Ollama + Chroma RAG lab with ingest, inspect, and chat workflows plus configurable chunking and retrieval.
 - **Snowflake GitHub Actions** – a family of GitHub Actions, helper libraries, and testing harnesses that showcase Cortex AI integrations plus day‑to‑day operational tooling.
 - **Snowflake labs and tooling** – Snowpark Container Services demos ([`Snowflake.SPCS.Lab`](https://github.com/marcelinojackson-org/Snowflake.SPCS.Lab)), the [`snow9s`](https://github.com/marcelinojackson-org/snow9s) TUI, and a reserved IaC track ([`Snowflake.IAC`](https://github.com/marcelinojackson-org/Snowflake.IAC)) ready to house future assets.
 
@@ -30,6 +31,12 @@ This README is the top-level atlas. Each repository underneath ships with its ow
 | --- | --- | --- |
 | [`DevSecOps.CDCDemo`](https://github.com/marcelinojackson-org/DevSecOps.CDCDemo) | CDC pipeline demo | MySQL source with Debezium CDC into Kafka, JDBC sink into Postgres, Kafka UI for visibility, seeded datasets for quick validation. |
 | [`DevSecOps.SecurityDemo`](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo) | Security pipeline demo | SAST + SCA (manual-only), SCAScan (Trivy SBOM), plus DAST (OWASP ZAP full scan) with artifacts, screenshots, and tuning rules. |
+
+### AIML / RAG
+
+| Path | Focus | Highlights / Notes |
+| --- | --- | --- |
+| [`AIML.RAGOpsLab`](https://github.com/marcelinojackson-org/AIML.RAGOpsLab) | Local RAG lab (WIP) | LangChain + Ollama + Chroma pipeline with ingest, list/inspect (CSV/TSV + vectors), and chat w/ citations. Configurable chunking + retrieval, Mermaid architecture diagrams, and WIP roadmap. |
 
 ### Snowflake labs and tooling
 
@@ -116,6 +123,20 @@ This repo currently ships the `spcs-etl-job/` sample, a containerized ETL worklo
 - `job_spec.yaml` – declares the runtime container (`etl-main`), registry path, and environment variables (`SNOWFLAKE_ACCOUNT`, `SNOWFLAKE_HOST`, `SNOWFLAKE_DATABASE`, `SNOWFLAKE_SCHEMA`, `SNOWFLAKE_WAREHOUSE`, `INPUT_STAGE`, `TARGET_TABLE`) consumed by the script.
 
 Use Snow CLI to stage the CSV sample, build/push the container, and create or run the job spec against your compute pool; the README inside `spcs-etl-job/` documents the scope and Snow CLI-driven workflow. The pattern leaves room for additional labs inside this repo as new SPCS experiments grow past prototype stage.
+
+## [`AIML.RAGOpsLab`](https://github.com/marcelinojackson-org/AIML.RAGOpsLab) (Work in Progress)
+
+This repo is a local RAG lab built on LangChain, Ollama, and Chroma. It is designed to ingest a directory of documents, build a vector index, and answer questions with citations.
+
+**What’s inside**
+
+- `ragopslab/ingest.py` — file loaders + chunking + embeddings into Chroma, with duplicate skipping and reset support.
+- `ragopslab/inspect.py` — list and inspect stored chunks/metadata, including CSV/TSV export and optional vectors.
+- `ragopslab/chat.py` — retrieval + answer flow using Ollama, returning citations.
+- `config.yaml` — centralized defaults for paths, chunking, models, and retrieval.
+- `docs/architecture_cross.svg` — cross‑functional architecture diagram.
+
+Start with the repo `README.md` for setup, configuration, and CLI command usage.
 
 ## [`snow9s`](https://github.com/marcelinojackson-org/snow9s)
 
