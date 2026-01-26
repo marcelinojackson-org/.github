@@ -7,7 +7,7 @@ Current highlights:
 - **Azure** – a complete AKS GitOps reference implementation that spans Terraform, Helm, Argo CD, Ansible, Prometheus/Grafana, and k6.
 - **DevSecOps CDC demo** – a local MySQL → Kafka (Debezium) → Postgres pipeline with Docker Compose, Kafka UI visibility, and seed data for validation.
 - **DevSecOps Security demo** – SAST/SCA, SCAScan (Trivy SBOM), and DAST (OWASP ZAP) pipelines, manual-only for demo control.
-- **AIML RAG Ops Lab (Work in Progress)** – a local LangChain + Ollama + Chroma RAG lab with ingest, inspect, and chat workflows plus configurable chunking and retrieval.
+- **AIML RAG Ops Lab (Work in Progress)** – a local LangChain + Ollama + Chroma RAG lab with ingest, inspect, and chat workflows, CSV/JSON ingestion, source inventory reports, and updated architecture diagrams.
 - **Snowflake GitHub Actions** – a family of GitHub Actions, helper libraries, and testing harnesses that showcase Cortex AI integrations plus day‑to‑day operational tooling.
 - **Snowflake labs and tooling** – Snowpark Container Services demos ([`Snowflake.SPCS.Lab`](https://github.com/marcelinojackson-org/Snowflake.SPCS.Lab)), the [`snow9s`](https://github.com/marcelinojackson-org/snow9s) TUI, and a reserved IaC track ([`Snowflake.IAC`](https://github.com/marcelinojackson-org/Snowflake.IAC)) ready to house future assets.
 
@@ -36,7 +36,7 @@ This README is the top-level atlas. Each repository underneath ships with its ow
 
 | Path | Focus | Highlights / Notes |
 | --- | --- | --- |
-| [`AIML.RAGOpsLab`](https://github.com/marcelinojackson-org/AIML.RAGOpsLab) | Local RAG lab (WIP) | LangChain + Ollama + Chroma pipeline with ingest, list/inspect (CSV/TSV + vectors), and chat w/ citations. Configurable chunking + retrieval, Mermaid architecture diagrams, and WIP roadmap. |
+| [`AIML.RAGOpsLab`](https://github.com/marcelinojackson-org/AIML.RAGOpsLab) | Local RAG lab (WIP) | LangChain + Ollama + Chroma pipeline with ingest, list/inspect (CSV/TSV + vectors), sources inventory, and chat w/ citations. Supports CSV/JSON ingestion, configurable chunking + retrieval, and both flowchart + cross‑functional architecture diagrams. |
 
 ### Snowflake labs and tooling
 
@@ -130,10 +130,11 @@ This repo is a local RAG lab built on LangChain, Ollama, and Chroma. It is desig
 
 **What’s inside**
 
-- `ragopslab/ingest.py` — file loaders + chunking + embeddings into Chroma, with duplicate skipping and reset support.
-- `ragopslab/inspect.py` — list and inspect stored chunks/metadata, including CSV/TSV export and optional vectors.
+- `ragopslab/ingest.py` — file loaders (PDF/CSV/JSON/TXT/MD) + chunking + embeddings into Chroma, with duplicate skipping and reset support.
+- `ragopslab/inspect.py` — list and inspect stored chunks/metadata, CSV/TSV export, optional vectors, plus a sources inventory report.
 - `ragopslab/chat.py` — retrieval + answer flow using Ollama, returning citations.
-- `config.yaml` — centralized defaults for paths, chunking, models, and retrieval.
+- `config.yaml` — centralized defaults for paths, chunking, models, retrieval, and cost estimates.
+- `docs/architecture_flow.svg` — CLI‑first flowchart of the system.
 - `docs/architecture_cross.svg` — cross‑functional architecture diagram.
 
 Start with the repo `README.md` for setup, configuration, and CLI command usage.
