@@ -25,18 +25,18 @@ This README is the top-level atlas. Each repository underneath ships with its ow
 | --- | --- | --- |
 | [`Azure.AKS.GitOps.Lab`](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab) | Azure Kubernetes Service GitOps lab | Terraform-based cluster bring-up, Helm workloads, Argo CD continuous sync, Ansible automation, observability stack, CLI playbooks, teardown tooling. |
 
+### AIML / RAG
+
+| Path | Focus | Highlights / Notes |
+| --- | --- | --- |
+| [`AIML.RAGOpsLab`](https://github.com/marcelinojackson-org/AIML.RAGOpsLab) | Local RAG lab | LangGraph + Ollama + Chroma pipeline with ingest, list/inspect (CSV/TSV + vectors), sources inventory, evals, and chat w/ citations. Supports CSV/JSON ingestion, configurable chunking + retrieval, and both flowchart + cross‑functional architecture diagrams. |
+
 ### DevSecOps
 
 | Path | Focus | Highlights / Notes |
 | --- | --- | --- |
 | [`DevSecOps.CDCDemo`](https://github.com/marcelinojackson-org/DevSecOps.CDCDemo) | CDC pipeline demo | MySQL source with Debezium CDC into Kafka, JDBC sink into Postgres, Kafka UI for visibility, seeded datasets for quick validation. |
 | [`DevSecOps.SecurityDemo`](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo) | Security pipeline demo | SAST + SCA (manual-only), SCAScan (Trivy SBOM), plus DAST (OWASP ZAP full scan) with artifacts, screenshots, and tuning rules. |
-
-### AIML / RAG
-
-| Path | Focus | Highlights / Notes |
-| --- | --- | --- |
-| [`AIML.RAGOpsLab`](https://github.com/marcelinojackson-org/AIML.RAGOpsLab) | Local RAG lab | LangGraph + Ollama + Chroma pipeline with ingest, list/inspect (CSV/TSV + vectors), sources inventory, evals, and chat w/ citations. Supports CSV/JSON ingestion, configurable chunking + retrieval, and both flowchart + cross‑functional architecture diagrams. |
 
 ### Snowflake labs and tooling
 
@@ -69,6 +69,20 @@ I built this lab for repeatable cluster builds, controlled experiments, and demo
 - **Operations tooling** – Python scripts under `scripts/` summarize Azure inventory and cost, while `decommission.sh` handles graceful teardown and local cleanup.
 
 See [`Azure.AKS.GitOps.Lab`](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab) `README.md`, `docs/diagrams/`, and `docs/troubleshooting.md` for diagrams, command references, and troubleshooting guides.
+
+## [`AIML.RAGOpsLab`](https://github.com/marcelinojackson-org/AIML.RAGOpsLab)
+
+This repo is a local RAG lab built on LangGraph, Ollama, and Chroma. It is designed to ingest a directory of documents, build a vector index, and answer questions with citations.
+
+**What’s inside**
+
+- `ragopslab/ingest.py` — file loaders (PDF/CSV/JSON/TXT/MD) + chunking + embeddings into Chroma, with duplicate skipping and reset support.
+- `ragopslab/inspect.py` — list and inspect stored chunks/metadata, CSV/TSV export, optional vectors, plus a sources inventory report.
+- `ragopslab/chat.py` — retrieval + answer flow using Ollama, returning citations.
+- `ragopslab/eval.py` — lightweight eval harness for QA checks.
+- `config.yaml` — centralized defaults for paths, chunking, models, retrieval, and cost estimates.
+- `docs/architecture_flow.svg` — CLI‑first flowchart of the system.
+- `docs/architecture_cross.svg` — cross‑functional architecture diagram.
 
 ## [`DevSecOps.SecurityDemo`](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo)
 
@@ -123,20 +137,6 @@ This repo currently ships the `spcs-etl-job/` sample, a containerized ETL worklo
 - `job_spec.yaml` – declares the runtime container (`etl-main`), registry path, and environment variables (`SNOWFLAKE_ACCOUNT`, `SNOWFLAKE_HOST`, `SNOWFLAKE_DATABASE`, `SNOWFLAKE_SCHEMA`, `SNOWFLAKE_WAREHOUSE`, `INPUT_STAGE`, `TARGET_TABLE`) consumed by the script.
 
 Use Snow CLI to stage the CSV sample, build/push the container, and create or run the job spec against your compute pool; the README inside `spcs-etl-job/` documents the scope and Snow CLI-driven workflow. The pattern leaves room for additional labs inside this repo as new SPCS experiments grow past prototype stage.
-
-## [`AIML.RAGOpsLab`](https://github.com/marcelinojackson-org/AIML.RAGOpsLab)
-
-This repo is a local RAG lab built on LangGraph, Ollama, and Chroma. It is designed to ingest a directory of documents, build a vector index, and answer questions with citations.
-
-**What’s inside**
-
-- `ragopslab/ingest.py` — file loaders (PDF/CSV/JSON/TXT/MD) + chunking + embeddings into Chroma, with duplicate skipping and reset support.
-- `ragopslab/inspect.py` — list and inspect stored chunks/metadata, CSV/TSV export, optional vectors, plus a sources inventory report.
-- `ragopslab/chat.py` — retrieval + answer flow using Ollama, returning citations.
-- `ragopslab/eval.py` — lightweight eval harness for QA checks.
-- `config.yaml` — centralized defaults for paths, chunking, models, retrieval, and cost estimates.
-- `docs/architecture_flow.svg` — CLI‑first flowchart of the system.
-- `docs/architecture_cross.svg` — cross‑functional architecture diagram.
 
 Start with the repo `README.md` for setup, configuration, and CLI command usage.
 
