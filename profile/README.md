@@ -12,7 +12,7 @@ Current highlights:
 - **DevSecOps Security demo** – SAST/SCA, SCAScan (Trivy SBOM), and DAST (OWASP ZAP) pipelines, manual-only for demo control.
 - **AIML RAG Ops Lab** – a local LangGraph + Ollama + Chroma RAG lab with ingest, inspect, and chat workflows, CSV/JSON ingestion, source inventory reports, evals, and updated architecture diagrams.
 - **Snowflake GitHub Actions** – a family of GitHub Actions, helper libraries, and testing harnesses that showcase Cortex AI integrations plus day‑to‑day operational tooling.
-- **Snowflake labs and tooling** – Snowpark Container Services demos ([`Snowflake.SPCS.Lab`](https://github.com/marcelinojackson-org/Snowflake.SPCS.Lab)), the [`snow9s`](https://github.com/marcelinojackson-org/snow9s) TUI, and a reserved IaC track ([`Snowflake.IAC`](https://github.com/marcelinojackson-org/Snowflake.IAC)) ready to house future assets.
+- **Snowflake labs and tooling** – Snowpark Container Services demos ([`Snowflake.SPCS.Lab`](https://github.com/marcelinojackson-org/Snowflake.SPCS.Lab)), the [`snow9s`](https://github.com/marcelinojackson-org/snow9s) k9s‑style TUI (services/pools/repos/instances), and a reserved IaC track ([`Snowflake.IAC`](https://github.com/marcelinojackson-org/Snowflake.IAC)) ready to house future assets.
 - **DataOps dbt medallion demo** – a minimal dbt Core medallion sample (bronze/silver/gold) on messy HR data in Postgres + Docker.
 
 This README is the top-level atlas. Each repository underneath ships with its own README for installation or usage details.
@@ -48,7 +48,7 @@ This README is the top-level atlas. Each repository underneath ships with its ow
 | Path | Focus | Highlights / Notes |
 | --- | --- | --- |
 | [`Snowflake.SPCS.Lab`](https://github.com/marcelinojackson-org/Snowflake.SPCS.Lab) | Snowpark Container Services lab | Containerized ETL demo (`spcs-etl-job/`) with Python loader, Dockerfile, staged sample CSVs, and a job spec wired for Snow CLI + compute pools. |
-| [`snow9s`](https://github.com/marcelinojackson-org/snow9s) | SPCS terminal dashboard | k9s-style TUI for Snowpark Container Services with fast keyboard nav, live refresh, and config via `SNOWFLAKE_*` env vars or `~/.snow9s/config.yaml`. |
+| [`snow9s`](https://github.com/marcelinojackson-org/snow9s) | SPCS terminal dashboard | k9s-style TUI with Services/Pools/Repos/Instances views, command mode (`:`), fast keyboard navigation, live refresh, and config via `SNOWFLAKE_*` env vars or `~/.snow9s/config.yaml`. |
 | [`Snowflake.IAC`](https://github.com/marcelinojackson-org/Snowflake.IAC) | Future infrastructure | Empty placeholder for eventual Snowflake IaC assets. |
 
 ### Snowflake GitHub Actions ([Medium Article](https://medium.com/@mjmarc.common/shipping-ai-powered-snowflake-workflows-with-github-actions-eeb3fe07a354))
@@ -147,7 +147,7 @@ Start with the repo `README.md` for setup, configuration, and CLI command usage.
 
 ## [`snow9s`](https://github.com/marcelinojackson-org/snow9s)
 
-[`snow9s`](https://github.com/marcelinojackson-org/snow9s) is a k9s-style terminal UI focused on Snowpark Container Services. It refreshes service listings every few seconds, exposes `snow9s list services` for a non-TUI path, and keeps navigation keyboard-first (`j/k`, `/`, `Ctrl+r`, `?` for help).
+[`snow9s`](https://github.com/marcelinojackson-org/snow9s) is a k9s-style terminal UI focused on Snowpark Container Services. It provides Services/Pools/Repos/Instances views, command mode (`:`), and a details pane, while keeping navigation keyboard-first (`j/k`, `/`, `Ctrl+r`, `?` for help).
 
 - **Configuration** – Reads `SNOWFLAKE_*` env vars or `~/.snow9s/config.yaml` contexts; writes `~/.snow9s/env` on first run so you can fill in values without exporting globally.
 - **Focus areas** – Surfaces services, compute pools, status, and resource age with contextual headers and a debug pane that shows executed Snowflake queries.
@@ -162,4 +162,3 @@ Start with the repo `README.md` for setup, configuration, and CLI command usage.
 ## Welcome
 
 Feel free to browse, explore, download, or comment. Feedback is always welcome.
-
