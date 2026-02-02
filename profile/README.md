@@ -9,7 +9,7 @@ Current highlights:
 - **DevSecOps Security demo** – SAST/SCA, SCAScan (Trivy SBOM), and DAST (OWASP ZAP) pipelines, manual-only for demo control.
 - **AIML RAG Ops Lab** – a local LangGraph + Ollama + Chroma RAG lab with ingest, inspect, and chat workflows, CSV/JSON ingestion, source inventory reports, evals, and updated architecture diagrams.
 - **Snowflake GitHub Actions** – a family of GitHub Actions, helper libraries, and testing harnesses that showcase Cortex AI integrations plus day‑to‑day operational tooling.
-- **Snowflake labs and tooling** – Snowpark Container Services demos ([`Snowflake.SPCS.Lab`](https://github.com/marcelinojackson-org/Snowflake.SPCS.Lab)), the [`snow9s`](https://github.com/marcelinojackson-org/snow9s) k9s‑style TUI (services/pools/repos/instances), and a reserved IaC track ([`Snowflake.IAC`](https://github.com/marcelinojackson-org/Snowflake.IAC)) ready to house future assets.
+- **Snowflake labs and tooling** – the [`snow9s`](https://github.com/marcelinojackson-org/snow9s) k9s‑style TUI (services/pools/repos/instances), and a reserved IaC track ([`Snowflake.IAC`](https://github.com/marcelinojackson-org/Snowflake.IAC)) ready to house future assets.
 - **DataOps dbt medallion demo** – a minimal dbt Core medallion sample (bronze/silver/gold) on messy HR data in Postgres + Docker.
 
 This README is the top-level atlas. Each repository underneath ships with its own README for installation or usage details.
@@ -44,7 +44,6 @@ This README is the top-level atlas. Each repository underneath ships with its ow
 
 | Path | Focus | Highlights / Notes |
 | --- | --- | --- |
-| [`Snowflake.SPCS.Lab`](https://github.com/marcelinojackson-org/Snowflake.SPCS.Lab) | Snowpark Container Services lab | Containerized ETL demo (`spcs-etl-job/`) with Python loader, Dockerfile, staged sample CSVs, and a job spec wired for Snow CLI + compute pools. |
 | [`snow9s`](https://github.com/marcelinojackson-org/snow9s) | SPCS terminal dashboard | k9s-style TUI with Services/Pools/Repos/Instances views, command mode (`:`), fast keyboard navigation, live refresh, and config via `SNOWFLAKE_*` env vars or `~/.snow9s/config.yaml`. |
 | [`Snowflake.IAC`](https://github.com/marcelinojackson-org/Snowflake.IAC) | Future infrastructure | Empty placeholder for eventual Snowflake IaC assets. |
 
@@ -126,21 +125,6 @@ The Snowflake side of the workspace is organized around a few themes.
 - **[`Snowflake.IAC`](https://github.com/marcelinojackson-org/Snowflake.IAC)** – intentionally blank for now so new infrastructure-as-code modules can land without reworking repo layout later.
 
 Each sub-repo’s README dives into installation steps, environment requirements, inputs/outputs, and examples. This overview keeps the spotlight on how the pieces fit together across Azure and Snowflake without duplicating usage content.
-
-## [`Snowflake.SPCS.Lab`](https://github.com/marcelinojackson-org/Snowflake.SPCS.Lab)
-
-This repo currently ships the `spcs-etl-job/` sample, a containerized ETL workload for Snowpark Container Services (SPCS). It demonstrates how to package a Python loader, publish it via Snow CLI, and execute it on a compute pool.
-
-**What’s inside**
-
-- `app/etl.py` – reads staged CSV files via `snowflake.connector`, authenticates with the OAuth session token at `/snowflake/session/token`, creates a temp staging table (`ORDERS_STG`), `COPY INTO`s from `@RAW_STAGE` (configurable), and inserts into a target table before committing.
-- `data/orders_01.csv` – seed data you can upload to a stage while testing the flow end to end.
-- `Dockerfile` – bundles the Python app alongside its dependencies so `snow spcs image push` can version the container.
-- `job_spec.yaml` – declares the runtime container (`etl-main`), registry path, and environment variables (`SNOWFLAKE_ACCOUNT`, `SNOWFLAKE_HOST`, `SNOWFLAKE_DATABASE`, `SNOWFLAKE_SCHEMA`, `SNOWFLAKE_WAREHOUSE`, `INPUT_STAGE`, `TARGET_TABLE`) consumed by the script.
-
-Use Snow CLI to stage the CSV sample, build/push the container, and create or run the job spec against your compute pool; the README inside `spcs-etl-job/` documents the scope and Snow CLI-driven workflow. The pattern leaves room for additional labs inside this repo as new SPCS experiments grow past prototype stage.
-
-Start with the repo `README.md` for setup, configuration, and CLI command usage.
 
 ## [`snow9s`](https://github.com/marcelinojackson-org/snow9s)
 
