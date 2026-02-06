@@ -92,7 +92,7 @@ Related article:<br><a href="https://medium.com/@mjmarc.common/shipping-ai-power
 | Project | Impact | Stack |
 |---------|--------|-------|
 | [snow9s](https://github.com/marcelinojackson-org/snow9s) | Terminal UI for Snowpark Container Services to navigate and manage services, pools, repositories, and instances with k9s-style shortcuts | Go, Bubble Tea, Lip Gloss, Snowflake |
-| [Snowflake.IAC](https://github.com/marcelinojackson-org/Snowflake.IAC) | Placeholder for future Snowflake infrastructure-as-code assets | Terraform, Snowflake |
+| [Snowflake.IAC](https://github.com/marcelinojackson-org/Snowflake.IAC) | End-to-end Snowflake Terraform demo provisioning warehouses, databases, schemas, tables, policies, tasks, streams, and shares for real-world analytics workflows | Terraform, Snowflake |
 
 </details>
 
@@ -173,9 +173,9 @@ I'm always interested in discussing platform engineering, DevSecOps practices, a
 
 Whether you are:
 
-- A **hiring manager** looking for someone who ships production systems
-- A **peer or leader** looking to exchange ideas on DevOps, Security, or AI topics
-- A **developer** wanting to contribute or ask questions
+- A Hiring Manager looking for someone who ships production systems
+- A Peer or Leader looking to exchange ideas on DevOps, Security, or AI topics
+- A Developer wanting to contribute or ask questions
 
 I'd love to hear from you.
 
