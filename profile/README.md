@@ -29,8 +29,8 @@ These represent my most impactful and production-ready work:
 | Project | What It Does | Tech Stack |
 |---------|--------------|------------|
 | [OpenGuardian](https://github.com/marcelinojackson-org/DevSecOps.OpenGuardian) | Catches infrastructure misconfigurations before they hit production. Scans Terraform, Docker, and Kubernetes with optional AI-generated fixes | Go, YAML, OpenAI |
-| [AKS GitOps Lab](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab) | Production-ready Kubernetes reference architecture with GitOps, monitoring, and load testing | Terraform, Argo CD, Helm, Prometheus, k6 |
-| [RAG Ops Lab](https://github.com/marcelinojackson-org/AIML.RAGOpsLab) | Private, local document Q&A using retrieval-augmented generation, designed to run without external API keys | LangGraph, Ollama, Chroma, Python |
+| [AKSGitOpsLab](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab) | Production-ready Kubernetes reference architecture with GitOps, monitoring, and load testing | Terraform, Argo CD, Helm, Prometheus, k6 |
+| [RAGOpsLab](https://github.com/marcelinojackson-org/AIML.RAGOpsLab) | Private, local document Q&A using retrieval-augmented generation, designed to run without external API keys | LangGraph, Ollama, Chroma, Python |
 | [Snowflake Cortex AI Actions](https://github.com/marcelinojackson-org/Snowflake.CortexAI.AgentAction) | GitHub Actions for Snowflake Cortex AI, covering Agents, Analyst, Search, and SQL functions for CI/CD | TypeScript, GitHub Actions, Snowflake |
 | [DevSecOps Security Demo](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo) | End-to-end security pipeline demo covering SAST, SCA, SBOM, and DAST, with reproducible workflows and artifacts | Snyk, Trivy, CycloneDX, OWASP ZAP |
 
@@ -101,9 +101,9 @@ New here? Pick your path:
 
 | Interest | Start Here | What You Will Learn |
 |----------|------------|---------------------|
-| GitOps and Kubernetes | [AKS GitOps Lab](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab) | Deploy a production cluster with Argo CD, Prometheus, and Grafana using infrastructure as code and automated deployments |
+| GitOps and Kubernetes | [AKSGitOpsLab](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab) | Deploy a production cluster with Argo CD, Prometheus, and Grafana using infrastructure as code and automated deployments |
 | Security Scanning | [OpenGuardian](https://github.com/marcelinojackson-org/DevSecOps.OpenGuardian) | Scan your first Terraform file in two commands and see security issues with AI-suggested fixes |
-| AI and RAG Systems | [RAG Ops Lab](https://github.com/marcelinojackson-org/AIML.RAGOpsLab) | Chat with your PDF documents locally with no API keys, fully private on your laptop |
+| AI and RAG Systems | [RAGOpsLab](https://github.com/marcelinojackson-org/AIML.RAGOpsLab) | Chat with your PDF documents locally with no API keys, fully private on your laptop |
 | Snowflake Automation | [Snowflake.AISQLAction](https://github.com/marcelinojackson-org/Snowflake.AISQLAction) | Add Cortex AI SQL functions to your Snowflake CI/CD pipelines |
 
 ---
