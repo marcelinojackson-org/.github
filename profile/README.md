@@ -4,7 +4,7 @@
 
 ### DevSecOps Specialist | Platform Engineer | AI/ML Practitioner
 
-**I build production-grade infrastructure, security tooling, and AI pipelines, then open-source them so others can learn and adapt.**
+**Specializing in production-grade DevSecOps engineering across infrastructure, CI/CD, orchestration, security tooling, and AI pipelines, with selected hobby projects shared as open source for others to learn and adapt.**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/marcelinojackson)
 [![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:marcelino.jackson@gmail.com)
@@ -14,6 +14,7 @@
 
 ---
 
+- **20+ years** of total experience across software engineering, DevSecOps, and platform engineering
 - **8+ years** in cloud-native architecture and DevOps
 - **2+ years** across GenAI, MLOps, LLMOps, and Snowflake Cortex AI
 - **Open-source projects** spanning infrastructure, security, and data
@@ -31,8 +32,8 @@ These represent my most impactful and production-ready work:
 | [OpenGuardian](https://github.com/marcelinojackson-org/DevSecOps.OpenGuardian) | Catches infrastructure misconfigurations before they hit production. Scans Terraform, Docker, and Kubernetes with optional AI-generated fixes | Go, YAML, OpenAI |
 | [AKSGitOpsLab](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab) | Production-ready Kubernetes reference architecture with GitOps, monitoring, and load testing | Terraform, Argo CD, Helm, Prometheus, k6 |
 | [RAGOpsLab](https://github.com/marcelinojackson-org/AIML.RAGOpsLab) | Private, local document Q&A using retrieval-augmented generation, designed to run without external API keys | LangGraph, Ollama, Chroma, Python |
-| [Snowflake Cortex AI Actions](https://github.com/marcelinojackson-org/Snowflake.CortexAI.AgentAction) | GitHub Actions for Snowflake Cortex AI, covering Agents, Analyst, Search, and SQL functions for CI/CD | TypeScript, GitHub Actions, Snowflake |
-| [DevSecOps Security Demo](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo) | End-to-end security pipeline demo covering SAST, SCA, SBOM, and DAST, with reproducible workflows and artifacts | Snyk, Trivy, CycloneDX, OWASP ZAP |
+| [Snowflake Cortex AI Actions](https://github.com/marcelinojackson-org/Snowflake.CortexAI.AgentAction) | GitHub Actions for Snowflake Cortex AI, covering Agents, Analyst, Search, and SQL functions for CI/CD.<br><a href="https://medium.com/@mjmarc.common/shipping-ai-powered-snowflake-workflows-with-github-actions-eeb3fe07a354"><img src="https://img.shields.io/badge/Medium-Read_Article-12100E?style=flat-square&logo=medium&logoColor=white" alt="Medium article" height="16" align="absmiddle" /></a> | TypeScript, GitHub Actions, Snowflake |
+| [DevSecOps Security Demo](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo) | End-to-end security pipeline demo covering SAST, SCA, SBOM, and DAST, with reproducible workflows and artifacts.<br><a href="https://medium.com/@mjmarc.common/shift-left-in-practice-sast-dast-and-sca-with-github-actions-cb5539f31d04"><img src="https://img.shields.io/badge/Medium-Read_Article-12100E?style=flat-square&logo=medium&logoColor=white" alt="Medium article" height="16" align="absmiddle" /></a> | Snyk, Trivy, CycloneDX, OWASP ZAP |
 
 ---
 
@@ -54,7 +55,7 @@ These represent my most impactful and production-ready work:
 | Project | Impact | Stack |
 |---------|--------|-------|
 | [DevSecOps.OpenGuardian](https://github.com/marcelinojackson-org/DevSecOps.OpenGuardian) | Scans infrastructure-as-code for security issues and optionally suggests fixes using LLMs to catch problems before `terraform apply` | Go, YAML, OpenAI API |
-| [DevSecOps.SecurityDemo](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo) | A complete security pipeline demonstrating SAST, SCA, and DAST scanning, ready to adapt for your CI/CD | Snyk, Trivy, CycloneDX SBOM, OWASP ZAP |
+| [DevSecOps.SecurityDemo](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo) | A complete security pipeline demonstrating SAST, SCA, and DAST scanning, ready to adapt for your CI/CD.<br><a href="https://medium.com/@mjmarc.common/shift-left-in-practice-sast-dast-and-sca-with-github-actions-cb5539f31d04"><img src="https://img.shields.io/badge/Medium-Read_Article-12100E?style=flat-square&logo=medium&logoColor=white" alt="Medium article" height="16" align="absmiddle" /></a> | Snyk, Trivy, CycloneDX SBOM, OWASP ZAP |
 | [DevSecOps.CDCDemo](https://github.com/marcelinojackson-org/DevSecOps.CDCDemo) | Stream database changes in real time for analytics using an industry-standard change data capture pattern | MySQL, Debezium, Kafka, PostgreSQL, JDBC Sink |
 
 </details>
@@ -70,6 +71,8 @@ These represent my most impactful and production-ready work:
 
 <details>
 <summary><strong>Snowflake GitHub Actions</strong></summary>
+
+Related article:<br><a href="https://medium.com/@mjmarc.common/shipping-ai-powered-snowflake-workflows-with-github-actions-eeb3fe07a354"><img src="https://img.shields.io/badge/Medium-Read_Article-12100E?style=flat-square&logo=medium&logoColor=white" alt="Medium article" height="16" align="absmiddle" /></a>
 
 | Project | Impact | Stack |
 |---------|--------|-------|
@@ -104,7 +107,7 @@ New here? Pick your path:
 | GitOps and Kubernetes | [AKSGitOpsLab](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab) | Deploy a production cluster with Argo CD, Prometheus, and Grafana using infrastructure as code and automated deployments |
 | Security Scanning | [OpenGuardian](https://github.com/marcelinojackson-org/DevSecOps.OpenGuardian) | Scan your first Terraform file in two commands and see security issues with AI-suggested fixes |
 | AI and RAG Systems | [RAGOpsLab](https://github.com/marcelinojackson-org/AIML.RAGOpsLab) | Chat with your PDF documents locally with no API keys, fully private on your laptop |
-| Snowflake Automation | [Snowflake.AISQLAction](https://github.com/marcelinojackson-org/Snowflake.AISQLAction) | Add Cortex AI SQL functions to your Snowflake CI/CD pipelines |
+| Snowflake Automation | [Snowflake.AISQLAction](https://github.com/marcelinojackson-org/Snowflake.AISQLAction) | Add Cortex AI SQL functions to your Snowflake CI/CD pipelines.<br><a href="https://medium.com/@mjmarc.common/shipping-ai-powered-snowflake-workflows-with-github-actions-eeb3fe07a354"><img src="https://img.shields.io/badge/Medium-Read_Article-12100E?style=flat-square&logo=medium&logoColor=white" alt="Medium article" height="16" align="absmiddle" /></a> |
 
 ---
 
@@ -187,6 +190,6 @@ I'd love to hear from you.
 
 <div align="center">
 
-If you find any of these projects useful, a star would mean a lot.
+If you find any of these projects useful, a star would mean a lot. -Marcelino
 
 </div>
