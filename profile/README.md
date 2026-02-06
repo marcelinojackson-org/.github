@@ -7,6 +7,7 @@ Current highlights:
 - **Azure** – a complete AKS GitOps reference implementation that spans Terraform, Helm, Argo CD, Ansible, Prometheus/Grafana, and k6.
 - **DevSecOps CDC demo** – a local MySQL → Kafka (Debezium) → Postgres pipeline with Docker Compose, Kafka UI visibility, and seed data for validation.
 - **DevSecOps Security demo** – SAST/SCA, SCAScan (Trivy SBOM), and DAST (OWASP ZAP) pipelines, manual-only for demo control.
+- **OpenGuardian** – a Go-based IaC/CI/CD security scanner with YAML rule packs, rich console output, JSON/YAML/CSV exports, and a fix workflow powered by LLMs.
 - **AIML RAG Ops Lab** – a local LangGraph + Ollama + Chroma RAG lab with ingest, inspect, and chat workflows, CSV/JSON ingestion, source inventory reports, evals, and updated architecture diagrams.
 - **Snowflake GitHub Actions** – a family of GitHub Actions, helper libraries, and testing harnesses that showcase Cortex AI integrations plus day‑to‑day operational tooling.
 - **Snowflake labs and tooling** – the [`snow9s`](https://github.com/marcelinojackson-org/snow9s) k9s‑style TUI (services/pools/repos/instances), and a reserved IaC track ([`Snowflake.IAC`](https://github.com/marcelinojackson-org/Snowflake.IAC)) ready to house future assets.
@@ -39,6 +40,7 @@ This README is the top-level atlas. Each repository underneath ships with its ow
 | --- | --- | --- |
 | [`DevSecOps.CDCDemo`](https://github.com/marcelinojackson-org/DevSecOps.CDCDemo) | CDC pipeline demo | MySQL source with Debezium CDC into Kafka, JDBC sink into Postgres, Kafka UI for visibility, seeded datasets for quick validation. |
 | [`DevSecOps.SecurityDemo`](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo) | Security pipeline demo | SAST + SCA (manual-only), SCAScan (Trivy SBOM), plus DAST (OWASP ZAP full scan) with artifacts, screenshots, and tuning rules. |
+| [`DevSecOps.OpenGuardian`](https://github.com/marcelinojackson-org/DevSecOps.OpenGuardian) | IaC and pipeline security scanner | Go-based scanner for Terraform/Docker/Kubernetes/Ansible/CI‑CD with YAML rules, boxed console output, JSON/YAML/CSV export, and an LLM-backed fix workflow with plan/apply and reporting. |
 
 ### Snowflake labs and tooling
 
@@ -96,6 +98,19 @@ This repo is a security testing demo built on the deliberately vulnerable AspGoa
 - **DAST (OWASP ZAP)** – manual full scan workflow with auth, spider depth hook, rules TSV tuning, and sample reports/screenshots.
 
 Start with [`DevSecOps.SecurityDemo`](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo) `README.md` and the runbooks at `docs/sast.md`, `docs/sca-scan.md`, and `docs/dast.md`.
+
+## [`DevSecOps.OpenGuardian`](https://github.com/marcelinojackson-org/DevSecOps.OpenGuardian)
+
+OpenGuardian is my Go-based security scanner for IaC, containers, and CI/CD. I run it locally to flag misconfigurations early and to generate safe fix plans before applying any changes.
+
+**What’s inside**
+
+- **Rule packs** – YAML rules across Terraform, Docker, Kubernetes, Ansible, CI/CD, DBT, Snowflake, and cloud providers. Easy to extend without recompiling.
+- **Scan outputs** – boxed console tables plus JSON/YAML/CSV exports for automation and reporting pipelines.
+- **Fix workflow** – scan-first plan/apply flow backed by an LLM, with confirmation gates and report output for diffs and change summaries.
+- **Config** – centralized runtime config in `~/.openguardian/config.yaml` created on first run, so fix/LLM settings are tracked and reproducible.
+
+Start with [`DevSecOps.OpenGuardian`](https://github.com/marcelinojackson-org/DevSecOps.OpenGuardian) `README.md` for install, command reference, and examples.
 
 ## Snowflake GitHub Actions & Tools
 
