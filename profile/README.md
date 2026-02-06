@@ -1,160 +1,192 @@
-# Marcelino’s OSS Public Portfolio
+<div align="center">
 
-This workspace curates my published OSS projects across Azure infrastructure, DevSecOps pipelines, Snowflake GitHub Actions, and Snowflake labs/tools—with room for additional stacks as they go public.
+# Hi, I'm Marcelino
 
-Current highlights:
+### DevSecOps Specialist | Platform Engineer | AI/ML Practitioner
 
-- **Azure** – a complete AKS GitOps reference implementation that spans Terraform, Helm, Argo CD, Ansible, Prometheus/Grafana, and k6.
-- **DevSecOps CDC demo** – a local MySQL → Kafka (Debezium) → Postgres pipeline with Docker Compose, Kafka UI visibility, and seed data for validation.
-- **DevSecOps Security demo** – SAST/SCA, SCAScan (Trivy SBOM), and DAST (OWASP ZAP) pipelines, manual-only for demo control.
-- **OpenGuardian** – a Go-based IaC/CI/CD security scanner with YAML rule packs, rich console output, JSON/YAML/CSV exports, and a fix workflow powered by LLMs.
-- **AIML RAG Ops Lab** – a local LangGraph + Ollama + Chroma RAG lab with ingest, inspect, and chat workflows, CSV/JSON ingestion, source inventory reports, evals, and updated architecture diagrams.
-- **Snowflake GitHub Actions** – a family of GitHub Actions, helper libraries, and testing harnesses that showcase Cortex AI integrations plus day‑to‑day operational tooling.
-- **Snowflake labs and tooling** – the [`snow9s`](https://github.com/marcelinojackson-org/snow9s) k9s‑style TUI (services/pools/repos/instances), and a reserved IaC track ([`Snowflake.IAC`](https://github.com/marcelinojackson-org/Snowflake.IAC)) ready to house future assets.
-- **DataOps dbt medallion demo** – a minimal dbt Core medallion sample (bronze/silver/gold) on messy HR data in Postgres + Docker.
+**I build production-grade infrastructure, security tooling, and AI pipelines, then open-source them so others can learn and adapt.**
 
-This README is the top-level atlas. Each repository underneath ships with its own README for installation or usage details.
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/marcelinojackson)
+[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:marcelino.jackson@gmail.com)
+[![Blog](https://img.shields.io/badge/Blog-Read-FF5722?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@mjmarc.common)
 
-## Technology Word Cloud
+</div>
 
-![Open Source technology word cloud](assets/wordcloud/oss-tech-wordcloud-v1-1.png)
+---
 
-## Portfolio map
+- **8+ years** in cloud-native architecture and DevOps
+- **2+ years** across GenAI, MLOps, LLMOps, and Snowflake Cortex AI
+- **Open-source projects** spanning infrastructure, security, and data
+- Creator of **OpenGuardian**, an IaC security scanner with LLM-powered remediation
+- Published **GitHub Actions** for the Snowflake ecosystem including Cortex AI integrations
 
-### Azure
+---
 
-| Path | Focus | Highlights / Notes |
-| --- | --- | --- |
-| [`DataOps.dbtMedallionDemo`](https://github.com/marcelinojackson-org/DataOps.dbtMedallionDemo) | dbt medallion demo | Messy HR data, Postgres + Docker, bronze/silver/gold layers. |
-| [`Azure.AKS.GitOps.Lab`](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab) | Azure Kubernetes Service GitOps lab | Terraform-based cluster bring-up, Helm workloads, Argo CD continuous sync, Ansible automation, observability stack, CLI playbooks, teardown tooling. |
+## Featured Projects
 
-### AIML / RAG
+These represent my most impactful and production-ready work:
 
-| Path | Focus | Highlights / Notes |
-| --- | --- | --- |
-| [`AIML.RAGOpsLab`](https://github.com/marcelinojackson-org/AIML.RAGOpsLab) | Local RAG lab | LangGraph + Ollama + Chroma pipeline with ingest, list/inspect (CSV/TSV + vectors), sources inventory, evals, and chat w/ citations. Supports CSV/JSON ingestion, configurable chunking + retrieval, and both flowchart + cross‑functional architecture diagrams. |
+| Project | What It Does | Tech Stack |
+|---------|--------------|------------|
+| [OpenGuardian](https://github.com/marcelinojackson-org/DevSecOps.OpenGuardian) | Catches infrastructure misconfigurations before they hit production. Scans Terraform, Docker, and Kubernetes with optional AI-generated fixes | Go, YAML, OpenAI |
+| [AKS GitOps Lab](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab) | Production-ready Kubernetes reference architecture with GitOps, monitoring, and load testing | Terraform, Argo CD, Helm, Prometheus, k6 |
+| [RAG Ops Lab](https://github.com/marcelinojackson-org/AIML.RAGOpsLab) | Private, local document Q&A using retrieval-augmented generation, designed to run without external API keys | LangGraph, Ollama, Chroma, Python |
+| [Snowflake Cortex AI Actions](https://github.com/marcelinojackson-org/Snowflake.CortexAI.AgentAction) | GitHub Actions for Snowflake Cortex AI, covering Agents, Analyst, Search, and SQL functions for CI/CD | TypeScript, GitHub Actions, Snowflake |
+| [DevSecOps Security Demo](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo) | End-to-end security pipeline demo covering SAST, SCA, SBOM, and DAST, with reproducible workflows and artifacts | Snyk, Trivy, CycloneDX, OWASP ZAP |
 
-### DevSecOps
+---
 
-| Path | Focus | Highlights / Notes |
-| --- | --- | --- |
-| [`DevSecOps.CDCDemo`](https://github.com/marcelinojackson-org/DevSecOps.CDCDemo) | CDC pipeline demo | MySQL source with Debezium CDC into Kafka, JDBC sink into Postgres, Kafka UI for visibility, seeded datasets for quick validation. |
-| [`DevSecOps.SecurityDemo`](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo) | Security pipeline demo | SAST + SCA (manual-only), SCAScan (Trivy SBOM), plus DAST (OWASP ZAP full scan) with artifacts, screenshots, and tuning rules. |
-| [`DevSecOps.OpenGuardian`](https://github.com/marcelinojackson-org/DevSecOps.OpenGuardian) | IaC and pipeline security scanner | Go-based scanner for Terraform/Docker/Kubernetes/Ansible/CI‑CD with YAML rules, boxed console output, JSON/YAML/CSV export, and an LLM-backed fix workflow with plan/apply and reporting. |
+## Full Portfolio
 
-### Snowflake labs and tooling
+<details>
+<summary><strong>Azure and Infrastructure</strong></summary>
 
-| Path | Focus | Highlights / Notes |
-| --- | --- | --- |
-| [`snow9s`](https://github.com/marcelinojackson-org/snow9s) | SPCS terminal dashboard | k9s-style TUI with Services/Pools/Repos/Instances views, command mode (`:`), fast keyboard navigation, live refresh, and config via `SNOWFLAKE_*` env vars or `~/.snow9s/config.yaml`. |
-| [`Snowflake.IAC`](https://github.com/marcelinojackson-org/Snowflake.IAC) | Future infrastructure | Empty placeholder for eventual Snowflake IaC assets. |
+| Project | Impact | Stack |
+|---------|--------|-------|
+| [Azure.AKS.GitOps.Lab](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab) | Deploy a production-grade Kubernetes cluster with GitOps workflows, observability, and load testing, using patterns common to platform teams at scale | Terraform, Helm, Argo CD, Ansible, Prometheus, Grafana, k6 |
+| [DataOps.dbtMedallionDemo](https://github.com/marcelinojackson-org/DataOps.dbtMedallionDemo) | Transform messy HR data through bronze, silver, and gold layers using dbt and demonstrate the medallion architecture pattern for data quality | dbt, PostgreSQL, Docker |
 
-### Snowflake GitHub Actions ([Medium Article](https://medium.com/@mjmarc.common/shipping-ai-powered-snowflake-workflows-with-github-actions-eeb3fe07a354))
+</details>
 
-| Path | Focus | Highlights / Notes |
-| --- | --- | --- |
-| [`Snowflake.Common`](https://github.com/marcelinojackson-org/Snowflake.Common) | Shared TypeScript library | Centralizes `SNOWFLAKE_*` validation, logging controls, and helper APIs (`getSnowflakeConnection`, `runSql`) consumed by every action. |
-| [`Snowflake.Testing`](https://github.com/marcelinojackson-org/Snowflake.Testing) | Validation scripts | Cross-repo build/test harnesses that rebuild shared libraries, package actions, and run local Cortex smoke tests. |
-| [`Snowflake.RunSQLAction`](https://github.com/marcelinojackson-org/Snowflake.RunSQLAction) | GitHub Action | Executes SQL end-to-end, applies safe limits, emits CSV/metadata artifacts for large result sets, and leans on the shared library for connectivity. |
-| [`Snowflake.CortexAI.AgentAction`](https://github.com/marcelinojackson-org/Snowflake.CortexAI.AgentAction) | GitHub Action | Bridges GitHub Actions with Cortex Agents, streaming every event plus a final summary for downstream workflow steps. |
-| [`Snowflake.CortexAI.AnalystAction`](https://github.com/marcelinojackson-org/Snowflake.CortexAI.AnalystAction) | GitHub Action | Connects to Cortex Analyst semantic models/views, exposes optional SQL echoing, and returns structured responses for analytics automation. |
-| [`Snowflake.CortexAI.SearchAction`](https://github.com/marcelinojackson-org/Snowflake.CortexAI.SearchAction) | GitHub Action | Wraps the Cortex Search REST API with filters, pagination, rerankers, and scoring controls. |
-| [`Snowflake.AISQLAction`](https://github.com/marcelinojackson-org/Snowflake.AISQLAction) | GitHub Action | Runs Cortex AISQL functions like `AI_COMPLETE`, `AI_EXTRACT`, `AI_SENTIMENT`, `AI_CLASSIFY`, `AI_COUNT_TOKENS`, `AI_EMBED`, `AI_SIMILARITY`, `AI_SUMMARIZE`, `AI_TRANSLATE`, and `AI_PARSE_DOCUMENT`. |
+<details>
+<summary><strong>DevSecOps and Security</strong></summary>
 
-## [`Azure.AKS.GitOps.Lab`](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab)
+| Project | Impact | Stack |
+|---------|--------|-------|
+| [DevSecOps.OpenGuardian](https://github.com/marcelinojackson-org/DevSecOps.OpenGuardian) | Scans infrastructure-as-code for security issues and optionally suggests fixes using LLMs to catch problems before `terraform apply` | Go, YAML, OpenAI API |
+| [DevSecOps.SecurityDemo](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo) | A complete security pipeline demonstrating SAST, SCA, and DAST scanning, ready to adapt for your CI/CD | Snyk, Trivy, CycloneDX SBOM, OWASP ZAP |
+| [DevSecOps.CDCDemo](https://github.com/marcelinojackson-org/DevSecOps.CDCDemo) | Stream database changes in real time for analytics using an industry-standard change data capture pattern | MySQL, Debezium, Kafka, PostgreSQL, JDBC Sink |
 
-I built this lab for repeatable cluster builds, controlled experiments, and demos:
+</details>
 
-- **Provisioning workflow** – Terraform modules carve out the resource group, networking, and AKS cluster. Targeted apply sequences are documented (and scripted) so recreating infra is deterministic.
-- **Application layers** – Helm charts deploy nginx, a Flask sample app, Prometheus, and Grafana. Argo CD watches the repo for drift and reconciles the Helm releases automatically.
-- **Automation & Runbooks** – Makefile targets, `cli-steps.txt`, and Ansible playbooks encode the exact bootstrap steps, secret hydration, and post-deploy scale adjustments.
-- **Observability & Testing** – Prometheus and Grafana arrive pre-wired with datasources/dashboards; k6 scripts deliver programmable load; docs walk through port-forwarding and CI triggers.
-- **Operations tooling** – Python scripts under `scripts/` summarize Azure inventory and cost, while `decommission.sh` handles graceful teardown and local cleanup.
+<details>
+<summary><strong>AI/ML and Data Engineering</strong></summary>
 
-See [`Azure.AKS.GitOps.Lab`](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab) `README.md`, `docs/diagrams/`, and `docs/troubleshooting.md` for diagrams, command references, and troubleshooting guides.
+| Project | Impact | Stack |
+|---------|--------|-------|
+| [AIML.RAGOpsLab](https://github.com/marcelinojackson-org/AIML.RAGOpsLab) | Build a local, private Q&A system over your documents with ingest, inspect, and chat workflows, plus CSV/JSON support and evaluation tooling | LangGraph, Ollama, Chroma, Python |
 
-## [`AIML.RAGOpsLab`](https://github.com/marcelinojackson-org/AIML.RAGOpsLab)
+</details>
 
-This repo is a local RAG lab built on LangGraph, Ollama, and Chroma. It is designed to ingest a directory of documents, build a vector index, and answer questions with citations.
+<details>
+<summary><strong>Snowflake GitHub Actions</strong></summary>
 
-**What’s inside**
+| Project | Impact | Stack |
+|---------|--------|-------|
+| [Snowflake.Common](https://github.com/marcelinojackson-org/Snowflake.Common) | Shared TypeScript library providing SNOWFLAKE_* validation, structured logging, and helper APIs that underpin all Snowflake actions | TypeScript |
+| [Snowflake.Testing](https://github.com/marcelinojackson-org/Snowflake.Testing) | Validation scripts and cross-repo build/test harnesses that keep quality consistent across the Snowflake action suite | TypeScript, Jest |
+| [Snowflake.RunSQLAction](https://github.com/marcelinojackson-org/Snowflake.RunSQLAction) | GitHub Action for executing SQL with configurable safety limits, outputting CSV and metadata artifacts for downstream jobs | TypeScript, GitHub Actions, Snowflake |
+| [Snowflake.CortexAI.AgentAction](https://github.com/marcelinojackson-org/Snowflake.CortexAI.AgentAction) | GitHub Action for Cortex Agents with streaming event support so you can build AI agent workflows directly in your pipelines | TypeScript, GitHub Actions, Snowflake Cortex |
+| [Snowflake.CortexAI.AnalystAction](https://github.com/marcelinojackson-org/Snowflake.CortexAI.AnalystAction) | GitHub Action for Cortex Analyst semantic models enabling natural language queries against your data warehouse in CI/CD | TypeScript, GitHub Actions, Snowflake Cortex |
+| [Snowflake.CortexAI.SearchAction](https://github.com/marcelinojackson-org/Snowflake.CortexAI.SearchAction) | GitHub Action for the Cortex Search REST API enabling semantic search over your Snowflake data from GitHub workflows | TypeScript, GitHub Actions, Snowflake Cortex |
+| [Snowflake.AISQLAction](https://github.com/marcelinojackson-org/Snowflake.AISQLAction) | GitHub Action for Cortex AI SQL functions including AI_COMPLETE, AI_EXTRACT, AI_SENTIMENT, and more, ready for use in your pipelines | TypeScript, GitHub Actions, Snowflake Cortex |
 
-- `ragopslab/ingest.py` — file loaders (PDF/CSV/JSON/TXT/MD) + chunking + embeddings into Chroma, with duplicate skipping and reset support.
-- `ragopslab/inspect.py` — list and inspect stored chunks/metadata, CSV/TSV export, optional vectors, plus a sources inventory report.
-- `ragopslab/chat.py` — retrieval + answer flow using Ollama, returning citations.
-- `ragopslab/eval.py` — lightweight eval harness for QA checks.
-- `config.yaml` — centralized defaults for paths, chunking, models, retrieval, and cost estimates.
-- `docs/architecture_flow.svg` — CLI‑first flowchart of the system.
-- `docs/architecture_cross.svg` — cross‑functional architecture diagram.
+</details>
 
-## [`DevSecOps.SecurityDemo`](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo)
+<details>
+<summary><strong>Snowflake Tools</strong></summary>
 
-This repo is a security testing demo built on the deliberately vulnerable AspGoat app, split into dedicated pipeline repos so each workflow can be run and explained independently.
+| Project | Impact | Stack |
+|---------|--------|-------|
+| [snow9s](https://github.com/marcelinojackson-org/snow9s) | Terminal UI for Snowpark Container Services to navigate and manage services, pools, repositories, and instances with k9s-style shortcuts | Go, Bubble Tea, Lip Gloss, Snowflake |
+| [Snowflake.IAC](https://github.com/marcelinojackson-org/Snowflake.IAC) | Placeholder for future Snowflake infrastructure-as-code assets | Terraform, Snowflake |
 
-**What’s inside**
+</details>
 
-- **SAST + SCA pipelines** – manual-only Snyk Code + Snyk Open Source (source dependency manifests) with SARIF in GitHub Code Scanning, timestamped SARIF/JSON artifacts, and a `docs/sast.md` runbook + screenshot for demos.
-- **SCAScan (Trivy SBOM)** – manual image scan that emits a CycloneDX SBOM and critical summary for OS packages and bundled dependencies.
-- **DAST (OWASP ZAP)** – manual full scan workflow with auth, spider depth hook, rules TSV tuning, and sample reports/screenshots.
+---
 
-Start with [`DevSecOps.SecurityDemo`](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo) `README.md` and the runbooks at `docs/sast.md`, `docs/sca-scan.md`, and `docs/dast.md`.
+## Quick Start
 
-## [`DevSecOps.OpenGuardian`](https://github.com/marcelinojackson-org/DevSecOps.OpenGuardian)
+New here? Pick your path:
 
-OpenGuardian is my Go-based security scanner for IaC, containers, and CI/CD. I run it locally to flag misconfigurations early and to generate safe fix plans before applying any changes.
+| Interest | Start Here | What You Will Learn |
+|----------|------------|---------------------|
+| GitOps and Kubernetes | [AKS GitOps Lab](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab) | Deploy a production cluster with Argo CD, Prometheus, and Grafana using infrastructure as code and automated deployments |
+| Security Scanning | [OpenGuardian](https://github.com/marcelinojackson-org/DevSecOps.OpenGuardian) | Scan your first Terraform file in two commands and see security issues with AI-suggested fixes |
+| AI and RAG Systems | [RAG Ops Lab](https://github.com/marcelinojackson-org/AIML.RAGOpsLab) | Chat with your PDF documents locally with no API keys, fully private on your laptop |
+| Snowflake Automation | [Snowflake.AISQLAction](https://github.com/marcelinojackson-org/Snowflake.AISQLAction) | Add Cortex AI SQL functions to your Snowflake CI/CD pipelines |
 
-**What’s inside**
+---
 
-- **Rule packs** – YAML rules across Terraform, Docker, Kubernetes, Ansible, CI/CD, DBT, Snowflake, and cloud providers. Easy to extend without recompiling.
-- **Scan outputs** – boxed console tables plus JSON/YAML/CSV exports for automation and reporting pipelines.
-- **Fix workflow** – scan-first plan/apply flow backed by an LLM, with confirmation gates and report output for diffs and change summaries.
-- **Config** – centralized runtime config in `~/.openguardian/config.yaml` created on first run, so fix/LLM settings are tracked and reproducible.
+## Tech Stack
 
-Start with [`DevSecOps.OpenGuardian`](https://github.com/marcelinojackson-org/DevSecOps.OpenGuardian) `README.md` for install, command reference, and examples.
+<div align="center">
 
-## Snowflake GitHub Actions & Tools
+**Languages**
 
-The Snowflake side of the workspace is organized around a few themes.
+![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
 
-### 1. Shared foundation
+**Infrastructure and Cloud**
 
-- **[`Snowflake.Common`](https://github.com/marcelinojackson-org/Snowflake.Common)** – guards against misconfigured environments, standardizes connection telemetry, and exposes reusable helpers for SQL execution. Actions depend on the published package and bundle it locally for Marketplace releases.
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white)
+![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Docker Compose](https://img.shields.io/badge/Docker_Compose-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Helm](https://img.shields.io/badge/Helm-0F1689?style=flat-square&logo=helm&logoColor=white)
 
-### 2. Cortex AI automation
+**DevOps and GitOps**
 
-- **[`Snowflake.CortexAI.AgentAction`](https://github.com/marcelinojackson-org/Snowflake.CortexAI.AgentAction)** – drives Cortex Agents conversations from CI/CD, capturing both the answer text and every streamed event so workflows can branch on intermediate reasoning or tool invocations.
-- **[`Snowflake.CortexAI.AnalystAction`](https://github.com/marcelinojackson-org/Snowflake.CortexAI.AnalystAction)** – fronts Cortex Analyst semantic models and semantic views, making it easy to wire natural-language analytics questions into CI pipelines or scheduled jobs.
-- **[`Snowflake.CortexAI.SearchAction`](https://github.com/marcelinojackson-org/Snowflake.CortexAI.SearchAction)** – exposes Cortex Search with optional filters, pagination, reranking, score thresholds, and field selection for targeted retrieval use cases.
-- **[`Snowflake.AISQLAction`](https://github.com/marcelinojackson-org/Snowflake.AISQLAction)** – AISQL-first action that executes Cortex AI SQL functions with JSON payloads and returns structured outputs for workflows.
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=flat-square&logo=ansible&logoColor=white)
+![Argo CD](https://img.shields.io/badge/Argo_CD-EF7B4D?style=flat-square&logo=argo&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white)
+![k6](https://img.shields.io/badge/k6-7D64FF?style=flat-square&logo=k6&logoColor=white)
 
-### 3. Core SQL execution
+**Security**
 
-- **[`Snowflake.RunSQLAction`](https://github.com/marcelinojackson-org/Snowflake.RunSQLAction)** – the baseline action for running SQL inside GitHub workflows. It enforces sensible `LIMIT`s, supports artifact persistence (CSV + metadata), and prints compact run summaries for small queries.
+![Snyk](https://img.shields.io/badge/Snyk-4C4A73?style=flat-square&logo=snyk&logoColor=white)
+![Trivy](https://img.shields.io/badge/Trivy-1904DA?style=flat-square&logo=aqua&logoColor=white)
+![OWASP ZAP](https://img.shields.io/badge/OWASP_ZAP-000000?style=flat-square&logo=owasp&logoColor=white)
+![CycloneDX](https://img.shields.io/badge/CycloneDX-1A1A1A?style=flat-square&logo=cyclonedx&logoColor=white)
 
-### 4. Operational dashboards & validation tooling
+**Data and AI**
 
-- **[`Snowflake.Testing`](https://github.com/marcelinojackson-org/Snowflake.Testing)** – bash-based harnesses that rebuild `Snowflake.Common`, package each action locally, and execute representative smoke tests (RunSQL, Cortex Search, Cortex Analyst, Cortex Agent) against a developer’s Snowflake account to catch regressions before publishing.
+![Snowflake](https://img.shields.io/badge/Snowflake-29B5E8?style=flat-square&logo=snowflake&logoColor=white)
+![Snowflake Cortex AI](https://img.shields.io/badge/Snowflake_Cortex_AI-29B5E8?style=flat-square&logo=snowflake&logoColor=white)
+![Kafka](https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
+![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
+![Chroma](https://img.shields.io/badge/Chroma-1C1C1C?style=flat-square&logo=databricks&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white)
+![dbt](https://img.shields.io/badge/dbt-FF694B?style=flat-square&logo=dbt&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![Debezium](https://img.shields.io/badge/Debezium-0F5C7D?style=flat-square&logo=debezium&logoColor=white)
 
-### 5. Future expansion
+</div>
 
-- **[`Snowflake.IAC`](https://github.com/marcelinojackson-org/Snowflake.IAC)** – intentionally blank for now so new infrastructure-as-code modules can land without reworking repo layout later.
+---
 
-Each sub-repo’s README dives into installation steps, environment requirements, inputs/outputs, and examples. This overview keeps the spotlight on how the pieces fit together across Azure and Snowflake without duplicating usage content.
+## Let's Connect
 
-## [`snow9s`](https://github.com/marcelinojackson-org/snow9s)
+I'm always interested in discussing platform engineering, DevSecOps practices, and AI/ML infrastructure.
 
-[`snow9s`](https://github.com/marcelinojackson-org/snow9s) is a k9s-style terminal UI focused on Snowpark Container Services. It provides Services/Pools/Repos/Instances views, command mode (`:`), and a details pane, while keeping navigation keyboard-first (`j/k`, `/`, `Ctrl+r`, `?` for help).
+Whether you are:
 
-- **Configuration** – Reads `SNOWFLAKE_*` env vars or `~/.snow9s/config.yaml` contexts; writes `~/.snow9s/env` on first run so you can fill in values without exporting globally.
-- **Focus areas** – Surfaces services, compute pools, status, and resource age with contextual headers and a debug pane that shows executed Snowflake queries.
-- **Build/test** – `make build` (drops `./bin/snow9s`) and `make test` (`go test ./...`) cover local validation; Go 1.22+ required.
+- A **hiring manager** looking for someone who ships production systems
+- A **peer or leader** looking to exchange ideas on DevOps, Security, or AI topics
+- A **developer** wanting to contribute or ask questions
 
-## DataOps
+I'd love to hear from you.
 
-| Path | Focus | Highlights / Notes |
-| --- | --- | --- |
-| [`DataOps.dbtMedallionDemo`](https://github.com/marcelinojackson-org/DataOps.dbtMedallionDemo) | dbt medallion demo | Messy HR data, Postgres + Docker, bronze/silver/gold layers. |
+<div align="center">
 
-## Welcome
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Let's_Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/marcelinojackson)
+[![Email](https://img.shields.io/badge/Email-Say_Hello-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:marcelino.jackson@gmail.com)
 
-Feel free to browse, explore, download, or comment. Feedback is always welcome.
+</div>
+
+---
+
+<div align="center">
+
+If you find any of these projects useful, a star would mean a lot.
+
+</div>
