@@ -18,7 +18,6 @@
 - **8+ years** in cloud-native architecture and DevOps
 - **2+ years** across GenAI, MLOps, LLMOps, and Snowflake Cortex AI
 - **Open-source projects** spanning infrastructure, security, and data
-- Creator of **OpenGuardian**, an IaC security scanner with LLM-powered remediation
 - Published **GitHub Actions** for the Snowflake ecosystem including Cortex AI integrations
 
 ---
@@ -53,7 +52,6 @@ These represent my most impactful and production-ready work:
 
 | Project | Impact | Stack |
 |---------|--------|-------|
-| [DevSecOps.OpenGuardian](https://github.com/marcelinojackson-org/DevSecOps.OpenGuardian) | Scans infrastructure-as-code for security issues and optionally suggests fixes using LLMs to catch problems before `terraform apply` | Go, YAML, OpenAI API |
 | [DevSecOps.SecurityDemo](https://github.com/marcelinojackson-org/DevSecOps.SecurityDemo) | A complete security pipeline demonstrating SAST, SCA, and DAST scanning, ready to adapt for your CI/CD.<br><a href="https://medium.com/@mjmarc.common/shift-left-in-practice-sast-dast-and-sca-with-github-actions-cb5539f31d04"><img src="https://img.shields.io/badge/Medium-Read_Article-12100E?style=flat-square&logo=medium&logoColor=white" alt="Medium article" height="16" align="absmiddle" /></a> | Snyk, Trivy, CycloneDX SBOM, OWASP ZAP |
 | [DevSecOps.CDCDemo](https://github.com/marcelinojackson-org/DevSecOps.CDCDemo) | Stream database changes in real time for analytics using an industry-standard change data capture pattern | MySQL, Debezium, Kafka, PostgreSQL, JDBC Sink |
 
@@ -104,7 +102,6 @@ New here? Pick your path:
 | Interest | Start Here | What You Will Learn |
 |----------|------------|---------------------|
 | GitOps and Kubernetes | [AKSGitOpsLab](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab) | Deploy a production cluster with Argo CD, Prometheus, and Grafana using infrastructure as code and automated deployments |
-| Security Scanning | [OpenGuardian](https://github.com/marcelinojackson-org/DevSecOps.OpenGuardian) | Scan your first Terraform file in two commands and see security issues with AI-suggested fixes |
 | AI and RAG Systems | [RAGOpsLab](https://github.com/marcelinojackson-org/AIML.RAGOpsLab) | Chat with your PDF documents locally with no API keys, fully private on your laptop |
 | Snowflake Automation | [Snowflake.CortexAI.AgentAction](https://github.com/marcelinojackson-org/Snowflake.CortexAI.AgentAction)<br>[Snowflake.CortexAI.AnalystAction](https://github.com/marcelinojackson-org/Snowflake.CortexAI.AnalystAction)<br>[Snowflake.CortexAI.SearchAction](https://github.com/marcelinojackson-org/Snowflake.CortexAI.SearchAction)<br>[Snowflake.AISQLAction](https://github.com/marcelinojackson-org/Snowflake.AISQLAction) | Build Snowflake CI/CD workflows using AI SQL, Agents, Analyst, and Search actions.<br><a href="https://medium.com/@mjmarc.common/shipping-ai-powered-snowflake-workflows-with-github-actions-eeb3fe07a354"><img src="https://img.shields.io/badge/Medium-Read_Article-12100E?style=flat-square&logo=medium&logoColor=white" alt="Medium article" height="16" align="absmiddle" /></a> |
 
