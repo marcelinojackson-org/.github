@@ -29,7 +29,6 @@ These represent my most impactful and production-ready work:
 
 | Project | What It Does | Tech Stack |
 |---------|--------------|------------|
-| [OpenGuardian](https://github.com/marcelinojackson-org/DevSecOps.OpenGuardian) | Catches infrastructure misconfigurations before they hit production. Scans Terraform, Docker, and Kubernetes with optional AI-generated fixes | Go, YAML, OpenAI |
 | [AKSGitOpsLab](https://github.com/marcelinojackson-org/Azure.AKS.GitOps.Lab) | Production-ready Kubernetes reference architecture with GitOps, monitoring, and load testing | Terraform, Argo CD, Helm, Prometheus, k6 |
 | [RAGOpsLab](https://github.com/marcelinojackson-org/AIML.RAGOpsLab) | Private, local document Q&A using retrieval-augmented generation, designed to run without external API keys | LangGraph, Ollama, Chroma, Python |
 | [Snowflake Cortex AI Actions](https://github.com/marcelinojackson-org/Snowflake.CortexAI.AgentAction) | GitHub Actions for Snowflake Cortex AI, covering Agents, Analyst, Search, and SQL functions for CI/CD.<br><a href="https://medium.com/@mjmarc.common/shipping-ai-powered-snowflake-workflows-with-github-actions-eeb3fe07a354"><img src="https://img.shields.io/badge/Medium-Read_Article-12100E?style=flat-square&logo=medium&logoColor=white" alt="Medium article" height="16" align="absmiddle" /></a> | TypeScript, GitHub Actions, Snowflake |
